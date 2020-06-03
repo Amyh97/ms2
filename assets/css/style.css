@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two&family:100,200,300,400,500,600,700=Lato&display:100,200,300,400,500,600,700,800=swap')
+
+/*--- header and menu ---*/
+.title {
+    text-align: center;
+    font-family: 'Lobster Two', cursive;
+    font-weight: 700;
+    font-size: 48px;
+    color: #dd2c00;
+    }
+
+.hero-image {
+   background: url("../images/weather.jpg");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 30rem;
+}
+
+
+    .fas fa-luggage-cart {
+        margin: 5px;
+        font-weight: 700;
+        font-size:48px;
+        color: #dd2c00;
+    }
+
+    @media (max-width:900px) {
+        .fas fa-luggage-car {
+            display: none;
+        }
+    }
+
+    @media (max-width:750px) {
+        .hero-image {
+            height: 15rem;
+        }
+    }
+
+    .menu {
+        text-align: center;
+        color: #fff;
+        font-family: "Lato",sans-serif;
+        letter-spacing: 2px;
+        font-size: 35px;
+        font-weight: 500;
+        padding-top: 4rem;
+    }
+
+    .menu a {
+        color: #fff;
+    }
+    .active, .menu li:hover {
+        font-weight: 700;
+    }
