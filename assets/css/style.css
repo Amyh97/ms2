@@ -78,3 +78,8 @@
         margin: 10px 10px 10px 50px;
         
     }
+
+    /*--- attractions---*/
+    div #map {
+        min-height: 360px;
+    }
