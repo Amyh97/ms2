@@ -1,42 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-<link rel="stylesheet" href="assets/css/style.css">
-<title>Visit Budapest</title>
-</head>
-<body>
-<header>
-    <div class="row">
-        <div class="col-md-1">
-            <a href="index.html"><i class="fas fa-luggage-cart"></i></a>
-        </div>
-        <div class="col-md-10">
-            <h1 class="title">Budapest</h1>
-        </div>
-    </div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <title>Visit Prague</title>
+    </head>
+    <body>
+        <header>
+            <div class="row">
+                <div class="col-md-1">
+                    <a href="index.html"><i class="fas fa-luggage-cart"></i></a>
+                </div>
+                <div class="col-md-10">
+                    <h1 class="title">Prague</h1>
+                </div>
+            </div>
+        </header>
+        <section>
+            <div class="hero-image">
+                <ul class="menu list-inline">
+                    <li class="list-inline-item active"><a href="index.html">Facts</a></li>
+                    <li class="list-inline-item"><a href="flights.html">Flights</a></li>
+                    <li class="list-inline-item"><a href="hotels.html">Accommodation</a></li>
+                    <li class="list-inline-item"><a href="sights.html">Attractions</a></li>
+                </ul>
+            </div>
 
-</header>
-<section>
-    <div class="hero-image">
-        <ul class=" menu list-inline">
-            <li class = "list-inline-item active"><a href="index.html">Facts</a></li>
-            <li class = "list-inline-item"><a href="flights.html">Flights</a></li>
-            <li class="list-inline-item"><a href="hotels.html">Accommodation</a></li>
-            <li class="list-inline-item"><a href="sights.html">Attractions</a></li>
-        </ul>
-    </div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Language</th>
+                        <th scope="col">Currency</th>
+                        <th scope="col">Side of road driven on</th>
+                        <th scope="col">Emergency number:</th>
+                        <th scope="col">Country code:</th>
+                        <th scope="col">Visas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Czech</th>
+                        <td>Czech Koruna (crowns)</td>
+                        <td>Left</td>
+                        <td>112</td>
+                        <td>420</td>
+                        <td>Schengrn rules apply; visas not required for most nationalities</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="row no-gutters">
+                <div class="col-md-4 offset-md-1">
+                    <img src="assets/images/flag.png" alt="Czech Flag" class="flag">
+                </div>
+                <div class="col-md-6">
+                <input type="number" placeholder="enter amount" id="amount">
+                <button onclick="convert">Convert</button>
+                <p id="conversion"></p>
 
-</section>
-<footer>
-
-</footer>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="assets/js/maps.js"></script>
-</body>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <p>Amy Hollis 2020</p>
+        </footer>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="assets/js/script.js"></script>
+    </body>
 </html>

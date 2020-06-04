@@ -1,32 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Lobster+Two&family:100,200,300,400,500,600,700=Lato&display:100,200,300,400,500,600,700,800=swap')
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Lobster+Two&display=swap');
 
-/*--- header and menu ---*/
+/*--- headers and menu ---*/
+
 .title {
-    text-align: center;
-    font-family: 'Lobster Two', cursive;
-    font-weight: 700;
+    font-family: 'Lobster Two',cursive;
     font-size: 48px;
+    font-weight: 500;
     color: #dd2c00;
-    }
-
-.hero-image {
-   background: url("../images/weather.jpg");
-    background-position: bottom;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 30rem;
+    text-align: center;
 }
 
+.fa-luggage-cart {
+    margin: 15px;
+    font-size: 48px;
+    color: #dd2c00;
+}
 
-    .fas fa-luggage-cart {
-        margin: 5px;
-        font-weight: 700;
-        font-size:48px;
-        color: #dd2c00;
-    }
+.hero-image {
+    background: url("../images/clock.jpg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 40rem;
+}
 
     @media (max-width:900px) {
-        .fas fa-luggage-car {
+        .fa-globe-europe {
             display: none;
         }
     }
@@ -40,7 +39,7 @@
     .menu {
         text-align: center;
         color: #fff;
-        font-family: "Lato",sans-serif;
+        font-family: "Special Elite",sans-serif;
         letter-spacing: 2px;
         font-size: 35px;
         font-weight: 500;
@@ -52,4 +51,30 @@
     }
     .active, .menu li:hover {
         font-weight: 700;
+    }
+
+    /*--- footer ---*/
+
+    footer {
+        color:#fafafa;
+        padding: 1rem;
+        background-color: #dd2c00;
+        font-size: 18px;
+        font-family: "Lobster Two",sans-serif;
+    
+    }
+
+    /*--- facts ---*/
+
+    .table {
+        border: 1px solid #dd2c00;
+        margin: 10px;
+        padding: 0;
+    }
+
+    .flag {
+        height: 85px;
+        border: 1px solid black;
+        margin: 10px 10px 10px 50px;
+        
     }
