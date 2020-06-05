@@ -1,19 +1,20 @@
-var amount = $("#amount").val();
-
-function convert() {
+$("#convert").click(function() {
+    var amount = $("#amount").val();
+var data = null;
 
 var xhr = new XMLHttpRequest();
+xhr.withCredentials = true;
 
-  xhr.onreadystatechange = function() {
+xhr.addEventListener("readystatechange", function () {
+	if (this.readyState === this.DONE) {
+		document.getElementById("conversion").innerHTML=this.responseText;
+	}
+});
 
-    if (this.readyState == 4 && this.status == 200) {
+xhr.open("GET", `https://currency-exchange.p.rapidapi.com/exchange?q=${amount}&from=GBP&to=CZK`);
+xhr.setRequestHeader("x-rapidapi-host", "currency-exchange.p.rapidapi.com");
+xhr.setRequestHeader("x-rapidapi-key", "5016226057msh752c3a66045bae2p13d849jsnd78e30e17efa");
 
-        document.getElementById("conversion").innerHTML = this.responseText;
+xhr.send(data);
 
-    }
-
-  };
-
-xhr.open("GET",`https://data.fixer.io/api/convert?access_key=91128bf4c960f618dd6b08944dd449a1&from=GBP&to=CZK&amount=${amount}`);
-xhr.send();
-}
+});
