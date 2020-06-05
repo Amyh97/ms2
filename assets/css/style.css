@@ -83,6 +83,10 @@
     }
 
     /*--- attractions---*/
-    div #map {
-        min-height: 360px;
+     #my-map {
+        height: 360px;
+    }
+
+    .tyn:hover {
+        background: url("..images/tyn.JPG")
     }
