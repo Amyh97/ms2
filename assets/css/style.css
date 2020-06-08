@@ -94,6 +94,7 @@
     /*--- attractions---*/
      #map {
         height: 360px;
+        margin: 5px
     }
 
     /*--- cards---*/
