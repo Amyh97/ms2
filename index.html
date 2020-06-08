@@ -21,7 +21,7 @@
             </div>
         </header>
         <section>
-            <div class="hero-image">
+            <div class="hero-image no-gutters">
                 <ul class="menu list-inline">
                     <li class="list-inline-item active"><a href="index.html">Facts</a></li>
                     <li class="list-inline-item"><a href="flights.html">Flights</a></li>
@@ -30,39 +30,117 @@
                 </ul>
             </div>
             <div class="row no-gutters">
-            <div class="col">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th scope="col">Language</th>
-                        <th scope="col">Currency</th>
-                        <th scope="col">Side of road driven on</th>
-                        <th scope="col">Emergency number:</th>
-                        <th scope="col">Country code:</th>
-                        <th scope="col">Visas</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">Czech</th>
-                        <td>Czech Koruna (crowns)</td>
-                        <td>Left</td>
-                        <td>112</td>
-                        <td>420</td>
-                        <td>Schengrn rules apply; visas not required for most nationalities</td>
-                    </tr>
-                </tbody>
-            </table>
-            </div>
-            </div>
-            <div class="row no-gutters">
-                
-                <div class="col-md-6">
-                <input type="number" placeholder="enter amount" id="amount">
-                <button id="convert" class="btn">Convert</button>
-                <p id="conversion"></p>
-
+                <div class="col-md-2 spacing">
+                    <div class="card" style="width: 20rem;">
+                        <img src="assets/images/tyn.JPG" class="card-img-top" alt="Lady before Tyn church" id="tyn" />
+                        <div class="card-body">
+                            <p class="card-text"><strong>Language:</strong> Czech</p>
+                            <p class="card-text"><strong>Emergency Number:</strong> 112</p>
+                            <p class="card-text"><strong>Country Code:</strong> 420</p>
+                        </div>
+                    </div>
                 </div>
+                <div class="col-md-2 spacing">
+                    <div class="card" style="width: 20rem;">
+                        <img src="assets/images/" class="card-img-top" alt="" id="#" />
+                        <div class="card-body">
+                        <p class="card-text"> In the Czech Republic they use Koruna (crowns), use the converter below to change Pounds to Koruna</p>
+                            <form>
+                                <input type="number" placeholder="amount">
+                                <button class="btn my-btn" type="submit" id="convert">Convert</button>
+                                <button class="btn my-btn" id="reset">reset</button>
+                            </form>
+                            <p class="card-text"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 spacing">
+                    <div class="card" style="width: 20rem;">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Month</th>
+                                    <th scope="col">Average temp (c)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Jan</td>
+                                    <td>-1</td>
+                                </tr>
+                                <tr>
+                                    <td>Feb</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td>Mar</td>
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <td>Apr</td>
+                                    <td>9</td>
+                                </tr>
+                                <tr>
+                                    <td>May</td>
+                                    <td>13</td>
+                                </tr>
+                                <tr>
+                                    <td>Jun</td>
+                                    <td>16</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            <div class="col-md-2 spacing">
+                <div class="card" style="width: 20rem;">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Month</th>
+                            <th scope="col">Average temp (c)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Jul</td>
+                            <td>18</td>
+                        </tr>
+                        <tr>
+                            <td>Aug</td>
+                            <td>18</td>
+                        </tr>
+                        <tr>
+                            <td>Sep</td>
+                            <td>14</td>
+                        </tr>
+                        <tr>
+                            <td>Oct</td>
+                            <td>9</td>
+                        </tr>
+                        <tr>
+                            <td>Nov</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>Dec</td>
+                            <td>0</td>
+                        </tr>
+                    </tbody>
+                </table>
+                </div>
+            </div>
+            
+            <div class="col-md-2 spacing">
+                <div class="card" style="width: 25rem;">
+                    <img src="assets/images/charlesBridge.jpg" class="card-img-top" alt="Charles Bridge" id="charlesBridge" />
+                    <div class="card-body">
+                        <p class="card-text"><strong>Side of Road:</strong> Left</p>
+                        <p class="card-text"><strong>Visa:</strong> Schengen rules apply, most nationalities don't need a Visa</p>
+                        <p class="card-text"><strong>Safety:</strong> Be careful where you exchange your money and watch for pick-pockets, especially in front of the Astronomical clock.</p>
+                    </div>
+                </div>
+            </div>
             </div>
         </section>
         <footer>

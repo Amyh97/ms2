@@ -8,6 +8,8 @@
     font-weight: 500;
     color: #dd2c00;
     text-align: center;
+    padding: 0;
+    margin: 0;
 }
 
 .flag {
@@ -16,15 +18,17 @@
     background-repeat: no-repeat;
     margin: 8px;
     max-height: 60px;
+    height: 85px;
+    padding: 0;
     
 }
 
 .hero-image {
     background: url("../images/clock.jpg");
-    background-position: top;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 40rem;
+    height: 25rem;
 }
 
     @media (max-width:900px) {
@@ -64,29 +68,46 @@
         background-color: #dd2c00;
         font-size: 18px;
         font-family: "Lobster Two",sans-serif;
+        margin: 0;
+        padding: 3px;
     
     }
 
     /*--- facts ---*/
-
-    .table {
-        border: 1px solid #dd2c00;
-        margin: 10px;
-        padding: 0;
+    #tyn {
+        max-width: 189px;
+        height: auto;
+         
     }
+   
+   #charlesBridge {
+       max-width: 240px;
+       height: auto;
+   }
 
-    .flag {
-        height: 85px;
-        border: 1px solid black;
-        margin: 10px 10px 10px 50px;
-        
-    }
+   .spacing {
+       margin-left: 20px;
+       margin-bottom: 12px;
+       margin-top: 10px;
+   }
 
     /*--- attractions---*/
      #map {
         height: 360px;
     }
 
-    .tyn:hover {
-        background: url("..images/tyn.JPG")
+    /*--- cards---*/
+
+    .card {
+        border: 1px solid #dd2c00;
+        box-shadow: 5px 10px #a30000;
+        padding: 5px;
+    }
+
+    
+    .my-btn{
+        background-color: #dd2c00;
+        border-radius: 3px;
+        color: #fff;
+        margin-top: 5px;
     }
