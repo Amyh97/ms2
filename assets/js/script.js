@@ -22,11 +22,11 @@ $("#searchHotel").click(function(){
 });
 
 $("#search").click(function() {
-    var dateOut = $("#dateOut").val();
-    var dateIn = $("#dateIn").val();
-    var dep = $("#dep").val();
+    var dateOut = $("#dep").val();
+    var dateIn = $("#rtn").val();
+    var dep = $("#airport").val();
 
-    makeAPICall(`https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browsequotes/v1.0/UK/GBP/en/${dep}-sky/PRG-sky/${dateOut}?inboundpartialdate=${dateIn}`, {
+    makeAPICall(`https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browsequotes/v1.0/UK/GBP/en/${airport}-sky/PRG-sky/${dep}?inboundpartialdate=${rtn}`, {
         "x-rapidapi-host": "skyscanner-skyscanner-flight-search-v1.p.rapidapi.com",
         "x-rapidapi-host": "skyscanner-skyscanner-flight-search-v1.p.rapidapi.com"
     });
