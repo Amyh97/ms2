@@ -91,6 +91,29 @@
        margin-top: 10px;
    }
 
+   /*--- flights---*/
+   
+   #vitus {
+       max-width: 190px;
+       height: auto;
+   }
+
+   #trdelník {
+       max-width: 200px;
+       height: auto;
+   }
+
+   .infoPic {
+       max-width: 190px;
+       height: auto;
+       padding-left: 55px;
+   }
+
+   .flights {
+       position: relative;
+       float: right;
+   }
+
     /*--- attractions---*/
      #map {
         height: 360px;
@@ -111,4 +134,10 @@
         border-radius: 3px;
         color: #fff;
         margin-top: 5px;
+    }
+
+    .card-title {
+        color: #dd2c00;
+        font-family: "lato",sans-serif;
+        font-size: 18px;
     }
