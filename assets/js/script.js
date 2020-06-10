@@ -2,18 +2,20 @@ async function makeAPICall(url, headers) {
   const response = await fetch(url, {
     headers
   });
-  
+  return response.json();
 }
 
 $("#convert").on("click",function (event) {
     event.preventDefault();
-    	var amount = $("#amount").val();
-	makeAPICall(`https://currency-exchange.p.rapidapi.com/exchange?q=${amount}&from=GBP&to=CZK`, {
-		"x-rapidapi-host": "currency-exchange.p.rapidapi.com",
-		"x-rapidapi-key": "5016226057msh752c3a66045bae2p13d849jsnd78e30e17efa"
+        var amount = $("#amount").val();
+        //document.getElementById("convetred").innerHTML = makeAPICall(
+            console.dir(makeAPICall(
+	    `https://currency-converter13.p.rapidapi.com/convert?amount=${amount}&from=GBP&to=CZK`, {
+		"x-rapidapi-host": "currency-converter13.p.rapidapi.com",
+        "x-rapidapi-key": "5016226057msh752c3a66045bae2p13d849jsnd78e30e17efa"}));
+
     });
 
-});
 
 
 $("#searchHotel").on("click",function(){
@@ -33,11 +35,5 @@ $("#fly").on("click",function(event) {
         "x-rapidapi-host": "skyscanner-skyscanner-flight-search-v1.p.rapidapi.com",
         "x-rapidapi-host": "skyscanner-skyscanner-flight-search-v1.p.rapidapi.com"
     });
-    addEventListener("readystatechange", function () {
-	if (this.readyState === this.DONE) {
-        console.log(this.responseText);
-        document.getElementById("results").innerHTML(`
-        <p>The cheapest flight found was £${Quotes[0].MinPrice}, flying with ${help}</p>`);
-	} 
-});
+    
 });
