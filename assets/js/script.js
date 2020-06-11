@@ -14,7 +14,8 @@ $("#convert").on("click",function (event) {
         "x-rapidapi-key": "5016226057msh752c3a66045bae2p13d849jsnd78e30e17efa"}));
         console.log(data);
         data.then((value) => {
-        console.log(value.amount);
+        var converstion =value.amount;
+        document.getElementById("convetred").append(converstion);
         
         });
 
