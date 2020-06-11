@@ -31,17 +31,7 @@
     height: 25rem;
 }
 
-    @media (max-width:900px) {
-        .flag {
-            display: none;
-        }
-    }
 
-    @media (max-width:750px) {
-        .hero-image {
-            height: 15rem;
-        }
-    }
 
     .menu {
         text-align: center;
@@ -91,6 +81,10 @@
        margin-top: 10px;
    }
 
+   #cb-card {
+       width: 30rem;
+   }
+
    /*--- flights---*/
    
    #vitus {
@@ -126,6 +120,11 @@
         border: 1px solid #dd2c00;
         box-shadow: 5px 10px #a30000;
         padding: 5px;
+        width: 20rem;
+    }
+
+    .flight-card {
+        width: 58rem;
     }
 
     
@@ -140,4 +139,28 @@
         color: #dd2c00;
         font-family: "lato",sans-serif;
         font-size: 18px;
+    }
+
+    /*---- accomodation ---*/
+
+    .hotel-card {
+        width: 40rem;
+    }
+
+    #goldenLane {
+        max-width: 200px;
+        height: auto;
+    }
+
+    /*--- media queries---*/
+    @media (max-width:900px) {
+        .flag {
+            display: none;
+        }
+    }
+
+    @media (max-width:750px) {
+        .hero-image {
+            height: 15rem;
+        }
     }

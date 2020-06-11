@@ -29,15 +29,31 @@
             <li class="list-inline-item"><a href="sights.html">Attractions</a></li>
         </ul>
     </div>
-    <div class="col-md-6">
-                    <input type="date" id="arrival" required/>
-                    <input type="date" id="leave" required/>
-                    <button id="searchHotel">Search</button>
+    <div class="row no gutters">
+        <div class="col-md-5 offset-md-1 spacing">
+                    <div class="card hotel-card">
+                        <img src="assets/images/goldenLane.JPG" class="card-img-top" alt="Golden Lane" id="goldenLane" />
+                        <div class="card-body">
+                            <form>
+                                <label for="ci">Check-in date</label>
+                                <input type="date" id="ci" required>
+                                <label for="co">Check-out date</label>
+                                <input type="date" id="co" required>
+                                <button type="submit" id="stay">Search</button>
+                                <button type="submit">Reset</button>
+                            </form>
+                        </div>
                 </div>
-                <div class="col-md-6">
-                    <div id="results"></div>
+    </div>
+                <div class="col-md-5 offset-md-1 spacing">
+                    <div class="card hotel-card">
+                        <div class="card-body">
+                            <h2>Results</h2>
+                            <p class="card-text"></p>
+                        </div>
                 </div>
-
+                </div>
+    </div>
 </section>
 <footer>
     <p>Amy Hollis 2020</p>
