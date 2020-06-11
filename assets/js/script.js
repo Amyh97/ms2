@@ -12,10 +12,9 @@ $("#convert").on("click",function (event) {
 	    `https://currency-converter13.p.rapidapi.com/convert?amount=${amount}&from=GBP&to=CZK`, {
 		"x-rapidapi-host": "currency-converter13.p.rapidapi.com",
         "x-rapidapi-key": "5016226057msh752c3a66045bae2p13d849jsnd78e30e17efa"}));
-        console.log(data);
         data.then((value) => {
-        var converstion =value.amount;
-        document.getElementById("convetred").append(converstion);
+        var converstion = value.amount.toFixed(2);
+        document.getElementById("convetred").append("There are "+converstion+"kč to £"+amount);
         
         });
 
@@ -24,10 +23,18 @@ $("#convert").on("click",function (event) {
 
 
 $("#searchHotel").on("click",function(){
-    makeAPICall("https://tripadvisor1.p.rapidapi.com/hotels/list?offset=0&currency=GBP&limit=30&order=asc&lang=en_US&sort=recommended&location_id=274707&adults=2&checkin=%3Crequired%3E&rooms=1&nights=2", {
+    var ci = $("#ci").value();
+    var adults = $("#people").val();
+    var rooms = $("#rooms").val();
+    var nights = $("#nights").val();
+    data = (makeAPICall(`https://tripadvisor1.p.rapidapi.com/hotels/list?offset=0&currency=GBP&limit=30&order=asc&lang=en_US&sort=recommended&location_id=274707&adults=${adults}1&checkin=${ci}&rooms${rooms}1&nights=${nights}`,
         "x-rapidapi-host": "tripadvisor1.p.rapidapi.com",
-        "x-rapidapi-key": "5016226057msh752c3a66045bae2p13d849jsnd78e30e17efa"
-    });
+		"x-rapidapi-key": "5016226057msh752c3a66045bae2p13d849jsnd78e30e17efa"
+    }));
+    data.then((value) => {
+        var hotel = value;
+        console.log(hotel);
+    })
 });
 
 $("#fly").on("click",function(event) {
@@ -36,9 +43,12 @@ $("#fly").on("click",function(event) {
     var rtn = $("#rtn").val();
     var airport = $("#airport").val();
 
-    makeAPICall(`https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browsequotes/v1.0/UK/GBP/en/${airport}-sky/PRG-sky/${dep}?inboundpartialdate=${rtn}`, {
+    data = (makeAPICall(`https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browsequotes/v1.0/UK/GBP/en/${airport}-sky/PRG-sky/${dep}?inboundpartialdate=${rtn}`, {
         "x-rapidapi-host": "skyscanner-skyscanner-flight-search-v1.p.rapidapi.com",
         "x-rapidapi-host": "skyscanner-skyscanner-flight-search-v1.p.rapidapi.com"
-    });
-    
+    }));
+        data.then(value) => {
+            var flight = #;
+            console.log(#);
+        }
 });
