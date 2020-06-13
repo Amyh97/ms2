@@ -88,6 +88,10 @@ body {
        width: 30rem;
    }
 
+   .table-spacing {
+       display: none;
+   }
+
    /*--- flights---*/
    
    #vitus {
@@ -154,6 +158,10 @@ body {
         font-size: 18px;
     }
 
+    #oldTown2 {
+        display: none;
+    }
+
     /*---- accomodation ---*/
 
     .hotel-card {
@@ -171,22 +179,66 @@ body {
             display: none;
         }
 
+        .title { 
+            padding-bottom: 15px;
+            }
+
+        #goldenLane, #charlesb {
+            max-width: 300px;
+        }
+
         .card {
             width: 90%;
+        }
+
+        #tyn {
+            max-width: 200px;
+        }
+
+        #oldTown2 {
+            max-width:  300px ;
+            display: block;
+        }
+
+        .table-spacing {
+            display: block;
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+
+        .halfYear {
+            display:none;
         }
     }
 
     @media (max-width:750px) {
         .hero-image {
             height: 18rem;
+            margin-top: 5px;
         }
 
         .card {
             width: 85%;
         }
 
+        #tyn {
+            max-width: 285px;
+        }
+
+        #convert {
+            float: right;
+        }
+
+        #charlesBridge, #lennon, #goldenLane {
+            max-width: 290px;
+        }
+
         #trdelník, #vitus {
             max-width: 150px;
+        }
+
+        #oldTown, #oldTown2, #charlesb {
+            display: none;
         }
 
         .search-card {
@@ -197,5 +249,9 @@ body {
             float: none;
             clear: both;
             padding-top: 10px;
+        }
+
+        .table-spacing {
+            display: none;
         }
     }
