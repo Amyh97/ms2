@@ -23,16 +23,16 @@ $("#convert").on("click",function (event) {
 
 
 $("#searchHotel").on("click",function(){
-    var ci = $("#ci").value();
+    var ci = $("#ci").val();
     var adults = $("#people").val();
     var rooms = $("#rooms").val();
     var nights = $("#nights").val();
-    data = (makeAPICall(`https://tripadvisor1.p.rapidapi.com/hotels/list?offset=0&currency=GBP&limit=30&order=asc&lang=en_US&sort=recommended&location_id=274707&adults=${adults}1&checkin=${ci}&rooms${rooms}1&nights=${nights}`,
+    data = (makeAPICall(`https://tripadvisor1.p.rapidapi.com/hotels/list?offset=0&currency=GBP&limit=30&order=asc&lang=en_US&sort=recommended&location_id=274707&adults=${adults}1&checkin=${ci}&rooms${rooms}1&nights=${nights}`, {
         "x-rapidapi-host": "tripadvisor1.p.rapidapi.com",
-		"x-rapidapi-key": "5016226057msh752c3a66045bae2p13d849jsnd78e30e17efa"
-    }));
+        "x-rapidapi-key": "5016226057msh752c3a66045bae2p13d849jsnd78e30e17efa"
+}));
     data.then((value) => {
-        var hotel = value;
+        var hotel = "";
         console.log(hotel);
     })
 });
@@ -47,8 +47,8 @@ $("#fly").on("click",function(event) {
         "x-rapidapi-host": "skyscanner-skyscanner-flight-search-v1.p.rapidapi.com",
         "x-rapidapi-host": "skyscanner-skyscanner-flight-search-v1.p.rapidapi.com"
     }));
-        data.then(value) => {
-            var flight = #;
-            console.log(#);
-        }
+        data.then((value)=> {
+            var flight = "";
+            console.log(flight);
+        })
 });
