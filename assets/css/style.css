@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Lobster+Two&display=swap');
 
+body {
+    width: 100%;
+}
+
 /*--- headers and menu ---*/
 
 .title {
@@ -54,7 +58,6 @@
 
     footer {
         color:#fafafa;
-        padding: 1rem;
         background-color: #dd2c00;
         font-size: 18px;
         font-family: "Lobster Two",sans-serif;
@@ -71,7 +74,7 @@
     }
    
    #charlesBridge {
-       max-width: 240px;
+       max-width: 260px; 
        height: auto;
    }
 
@@ -93,7 +96,7 @@
    }
 
    #trdelník {
-       max-width: 200px;
+       max-width: 180px;
        height: auto;
    }
 
@@ -106,6 +109,16 @@
    .flights {
        position: relative;
        float: right;
+   }
+   
+   .search-card {
+       height: 35rem;
+   }
+
+   #flight-img {
+       clear: both;
+       float: left;
+       padding-right:25px; 
    }
 
     /*--- attractions---*/
@@ -124,7 +137,7 @@
     }
 
     .flight-card {
-        width: 58rem;
+        width: 45rem;
     }
 
     
@@ -157,10 +170,32 @@
         .flag {
             display: none;
         }
+
+        .card {
+            width: 90%;
+        }
     }
 
     @media (max-width:750px) {
         .hero-image {
-            height: 15rem;
+            height: 18rem;
+        }
+
+        .card {
+            width: 85%;
+        }
+
+        #trdelník, #vitus {
+            max-width: 150px;
+        }
+
+        .search-card {
+            height: 45rem;
+        }
+
+        #flight-form {
+            float: none;
+            clear: both;
+            padding-top: 10px;
         }
     }
