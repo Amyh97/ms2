@@ -32,8 +32,8 @@ $("#searchHotel").on("click",function(){
         "x-rapidapi-key": "5016226057msh752c3a66045bae2p13d849jsnd78e30e17efa"
 }));
     data.then((value) => {
-        var hotel = "";
-        console.log(hotel);
+        var fhotelName = value.data[0].name;
+        console.log(fhotelName);
     })
 });
 
@@ -45,10 +45,11 @@ $("#fly").on("click",function(event) {
 
     data = (makeAPICall(`https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browsequotes/v1.0/UK/GBP/en/${airport}-sky/PRG-sky/${dep}?inboundpartialdate=${rtn}`, {
         "x-rapidapi-host": "skyscanner-skyscanner-flight-search-v1.p.rapidapi.com",
-        "x-rapidapi-host": "skyscanner-skyscanner-flight-search-v1.p.rapidapi.com"
+        "x-rapidapi-key": "5016226057msh752c3a66045bae2p13d849jsnd78e30e17efa"
     }));
         data.then((value)=> {
-            var flight = "";
-            console.log(flight);
+            var flight = value.Quotes[0].MinPrice;
+            var carrier = value.Carriers[0].Name;
+            document.getElementById("flightResults").append("The cheapest flight found cost £"+flight + ", flying with "+carrier)
         })
 });

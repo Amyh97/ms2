@@ -96,7 +96,7 @@ body {
    /*--- flights---*/
    
    #vitus {
-       max-width: 190px;
+       max-width: 260px;
        height: auto;
    }
 
@@ -114,6 +114,17 @@ body {
    .flights {
        position: relative;
        float: right;
+       max-width: 40%;
+       clear: both;
+       margin: 0;
+       padding-top: 25%;
+       padding-left: 5px;
+       text-align: left;
+
+   }
+
+   #flightResults {
+       font-size: large;
    }
    
    .search-card {
@@ -166,11 +177,16 @@ body {
     /*---- accomodation ---*/
 
     .hotel-card {
-        width: 40rem;
+        width: 50rem;
+        padding-bottom: 10px;
     }
 
-    #goldenLane {
-        max-width: 200px;
+    .hotel-form {
+        margin: 8px;
+    }
+
+    #goldenLane, #charlesb {
+        max-width: 240px;
         height: auto;
     }
 
@@ -209,6 +225,10 @@ body {
 
         .halfYear {
             display:none;
+        }
+
+        .flights {
+            padding-top: 15%;
         }
     }
 
@@ -254,5 +274,10 @@ body {
 
         .table-spacing {
             display: none;
+        }
+
+        #flightResults {
+            font-size: larger;
+            padding-right: 5px;
         }
     }
