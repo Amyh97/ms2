@@ -22,7 +22,8 @@ $("#convert").on("click",function (event) {
 
 
 
-$("#searchHotel").on("click",function(){
+$("#searchHotel").on("click",function(event){
+    event.preventDefault();
     var ci = $("#ci").val();
     var adults = $("#people").val();
     var rooms = $("#rooms").val();
@@ -33,7 +34,14 @@ $("#searchHotel").on("click",function(){
 }));
     data.then((value) => {
         var fhotelName = value.data[0].name;
-        console.log(fhotelName);
+        var fhotelPrice = value.data[0].price;
+        var shotelName =value.data[1].name;
+        var shotelPrice = value.data[1].price;
+        var thotelName= value.data[2].name;
+        var thotelPrice= value.data[2].price;
+        document.getElementById("fhotel").append(fhotelName + " costing around " + fhotelPrice);
+        document.getElementById("shotel").append(shotelName + " costing around " + shotelPrice);
+        document.getElementById("thotel").append(thotelName + " costing around " + thotelPrice);
     })
 });
 
