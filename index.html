@@ -8,9 +8,10 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
         <link rel="stylesheet" href="assets/css/style.css" />
-           </head>
+    </head>
     <body>
         <header>
+            <!-- bootstrap grid to put flag on left and title in the middle of same row-->
             <div class="row">
                 <div class="col-md-1 flag">
                     <a href="index.html"></a>
@@ -21,7 +22,9 @@
             </div>
         </header>
         <section>
+            <!-- hero image to draw attention to navbar-->
             <div class="hero-image no-gutters">
+                <!-- list inline class adds Bootstrap styling to make menu horizontal-->
                 <ul class="menu list-inline">
                     <li class="list-inline-item active"><a href="index.html">Facts</a></li>
                     <li class="list-inline-item"><a href="flights.html">Flights</a></li>
@@ -29,9 +32,11 @@
                     <li class="list-inline-item"><a href="sights.html">Attractions</a></li>
                 </ul>
             </div>
+            <!--section under hero image with information and converter-->
             <div class="row no-gutters">
                 <div class="col-md-2 col-sm-4 spacing">
                     <div class="card">
+                        <!--facts-->
                         <img src="assets/images/tyn.JPG" class="card-img-top" alt="Lady before Tyn church" id="tyn" />
                         <div class="card-body">
                             <p class="card-text"><strong>Language:</strong> Czech</p>
@@ -42,11 +47,13 @@
                 </div>
                 <div class="col-md-2 col-sm-6 spacing">
                     <div class="card">
-                        <img src="assets/images/oldTown.JPG" class="card-img-top" alt="Old Town" id="oldTown2"/>
+                        <!--form to be fed into URL for converter API-->
+                        <img src="assets/images/oldTown.JPG" class="card-img-top" alt="Old Town" id="oldTown2" />
                         <div class="card-body">
-                        <p class="card-text"> In the Czech Republic they use Koruna (crowns), use the converter below to change Pounds to Koruna</p>
+                            <h2>Money:</h2>
+                            <p class="card-text">In the Czech Republic they use Koruna (crowns), use the converter below to change Pounds to Koruna</p>
                             <form>
-                                <input type="number" placeholder="amount" id="amount">
+                                <input type="number" placeholder="amount" id="amount" />
                                 <button class="btn my-btn" type="submit" id="convert">Convert</button>
                                 <button class="btn my-btn" id="reset">reset</button>
                             </form>
@@ -54,6 +61,7 @@
                         </div>
                     </div>
                 </div>
+                <!--jan-jun average temps not visable on medium size screens-->
                 <div class="col-md-2 col-sm-6 spacing">
                     <div class="card halfYear">
                         <table class="table table-striped">
@@ -92,57 +100,59 @@
                         </table>
                     </div>
                 </div>
-            <div class="col-md-2 col-sm-4 spacing">
-                <div class="card halfYear">
-                <table class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th scope="col">Month</th>
-                            <th scope="col">Average temp (c)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Jul</td>
-                            <td>18</td>
-                        </tr>
-                        <tr>
-                            <td>Aug</td>
-                            <td>18</td>
-                        </tr>
-                        <tr>
-                            <td>Sep</td>
-                            <td>14</td>
-                        </tr>
-                        <tr>
-                            <td>Oct</td>
-                            <td>9</td>
-                        </tr>
-                        <tr>
-                            <td>Nov</td>
-                            <td>4</td>
-                        </tr>
-                        <tr>
-                            <td>Dec</td>
-                            <td>0</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="col-md-2 col-sm-4 spacing">
+                    <!-- jul-dec average temps not visable on medium screens-->
+                    <div class="card halfYear">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Month</th>
+                                    <th scope="col">Average temp (c)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Jul</td>
+                                    <td>18</td>
+                                </tr>
+                                <tr>
+                                    <td>Aug</td>
+                                    <td>18</td>
+                                </tr>
+                                <tr>
+                                    <td>Sep</td>
+                                    <td>14</td>
+                                </tr>
+                                <tr>
+                                    <td>Oct</td>
+                                    <td>9</td>
+                                </tr>
+                                <tr>
+                                    <td>Nov</td>
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <td>Dec</td>
+                                    <td>0</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
-            </div>
 
-            <div class="card col-sm-12 table-spacing">
-            <div class="table-spacing">
-                <table class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th scope="col">Month</th>
-                            <th scope="col">Average temp (c)</th>
-                            <th scope="col">Month</th>
-                            <th scope="col">Average temp (c)</th> 
-                        </tr>
-                    </thead>
-                    <tbody>
+                <div class="card col-sm-12 table-spacing">
+                    <!--card only visable on tablet size screens to keep data together-->
+                    <div class="table-spacing">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Month</th>
+                                    <th scope="col">Average temp (c)</th>
+                                    <th scope="col">Month</th>
+                                    <th scope="col">Average temp (c)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
                                 <tr>
                                     <td>Jan</td>
                                     <td>-1</td>
@@ -180,21 +190,21 @@
                                     <td>0</td>
                                 </tr>
                             </tbody>
-
-                </table>
-            </div>
-            </div>
-            
-            <div class="col-md-2  col-sm-6 spacing">
-                <div class="card" id="cb-card">
-                    <img src="assets/images/charlesBridge.jpg" class="card-img-top" alt="Charles Bridge" id="charlesBridge" />
-                    <div class="card-body">
-                        <p class="card-text"><strong>Side of Road:</strong> Left</p>
-                        <p class="card-text"><strong>Visa:</strong> Schengen rules apply, most nationalities don't need a Visa</p>
-                        <p class="card-text"><strong>Safety:</strong> Be careful where you exchange your money and watch for pick-pockets, especially in front of the Astronomical clock.</p>
+                        </table>
                     </div>
                 </div>
-            </div>
+
+                <div class="col-md-2 col-sm-6 spacing">
+                    <!--facts-->
+                    <div class="card" id="cb-card">
+                        <img src="assets/images/charlesBridge.jpg" class="card-img-top" alt="Charles Bridge" id="charlesBridge" />
+                        <div class="card-body">
+                            <p class="card-text"><strong>Side of Road:</strong> Left</p>
+                            <p class="card-text"><strong>Visa:</strong> Schengen rules apply, most nationalities don't need a Visa</p>
+                            <p class="card-text"><strong>Safety:</strong> Be careful where you exchange your money and watch for pick-pockets, especially in front of the Astronomical clock.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
         <footer>

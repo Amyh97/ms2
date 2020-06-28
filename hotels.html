@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-<link rel="stylesheet" href="assets/css/style.css">
-<title>Visit Prague</title>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Visit Prague</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+        <link rel="stylesheet" href="assets/css/style.css" />
+    </head>
+    <body>
         <header>
+            <!-- bootstrap grid to put flag on left and title in the middle of same row-->
             <div class="row">
                 <div class="col-md-1 flag">
                     <a href="index.html"></a>
@@ -20,58 +21,69 @@
                 </div>
             </div>
         </header>
-<section>
-    <div class="hero-image">
-        <ul class=" menu list-inline">
-            <li class = "list-inline-item "><a href="index.html">Facts</a></li>
-            <li class = "list-inline-item"><a href="flights.html">Flights</a></li>
-            <li class="list-inline-item active"><a href="hotels.html">Accommodation</a></li>
-            <li class="list-inline-item"><a href="sights.html">Attractions</a></li>
-        </ul>
-    </div>
-    <div class="row no gutters">
-        <div class="col-md-5 offset-md-1 spacing">
+        <section>
+            <!--hero image to draw attention to navbar menu-->
+            <div class="hero-image">
+                <!-- list inline class adds Bootstrap styling to make menu horizontal-->
+                <ul class="menu list-inline">
+                    <li class="list-inline-item"><a href="index.html">Facts</a></li>
+                    <li class="list-inline-item"><a href="flights.html">Flights</a></li>
+                    <li class="list-inline-item active"><a href="hotels.html">Accommodation</a></li>
+                    <li class="list-inline-item"><a href="sights.html">Attractions</a></li>
+                </ul>
+            </div>
+            <!-- section under hero image with hotel search and results sections in cards-->
+            <div class="row no gutters">
+                <div class="col-md-5 offset-md-1 spacing">
                     <div class="card hotel-card">
                         <img src="assets/images/goldenLane.JPG" class="card-img-top" alt="Golden Lane" id="goldenLane" />
-                        <img src="assets/images/charlesb.JPG" class="card-img-top" alt="Charles Bridge" id="charlesb"/>
+                        <img src="assets/images/charlesb.JPG" class="card-img-top" alt="Charles Bridge" id="charlesb" />
                         <div class="card-body">
+                            <!--search-->
                             <form class="hotel-form">
+                                <!--lables to show what data is required-->
                                 <label for="ci">Check-in date</label>
-                                <input type="date" id="ci" required><br>
+                                <!-- br used to keep lables and input fields together-->
+                                <input type="date" id="ci" required /><br />
                                 <label for="rooms">Number of rooms</label>
-                                <input type="number" id="rooms" required><br>
+                                <!--required used to provent errors as data is used to fill in URL for API call-->
+                                <input type="number" id="rooms" required /><br />
                                 <label for="people">Number of Adults</label>
-                                <input id="people" required type="number"><br>
+                                <input id="people" required type="number" /><br />
                                 <label for="nights">Number of nights</label>
-                                <input type="number" id="nights" required><br>
+                                <input type="number" id="nights" required /><br />
                                 <button type="submit" id="searchHotel">Search</button>
+                                <!-- type submit with no action refreshed page-->
                                 <button type="submit">Reset</button>
                             </form>
                         </div>
+                    </div>
                 </div>
-    </div>
                 <div class="col-md-5 offset-md-1 spacing">
                     <div class="card hotel-card">
                         <div class="card-body">
+                            <!-- results from API-->
                             <h2>Results</h2>
                             <div class="card-text">
-                                <h4> Top three hotels on Tripadvisor for these dates:</h4>
+                                <h4>Top three hotels on Tripadvisor for these dates:</h4>
+                                <!--ol used to show the top 3 recommended hotels-->
                                 <ol>
+                                    <!--IDs used in JavaScript to add data to li elements-->
                                     <li id="fhotel"></li>
                                     <li id="shotel"></li>
                                     <li id="thotel"></li>
                                 </ol>
                             </div>
                         </div>
+                    </div>
                 </div>
-                </div>
-    </div>
-</section>
-<footer>
-    <p>Amy Hollis 2020</p>
-</footer>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="assets/js/script.js"></script>
-</body>
+            </div>
+        </section>
+        <footer>
+            <p>Amy Hollis 2020</p>
+        </footer>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="assets/js/script.js"></script>
+    </body>
 </html>

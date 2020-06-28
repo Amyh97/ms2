@@ -8,9 +8,10 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
         <link rel="stylesheet" href="assets/css/style.css" />
-            </head>
+    </head>
     <body>
-                <header>
+        <header>
+            <!-- bootstrap grid to put flag on left and title in the middle of same row-->
             <div class="row">
                 <div class="col-md-1 flag">
                     <a href="index.html"></a>
@@ -21,7 +22,9 @@
             </div>
         </header>
         <section>
+            <!-- hero image to draw attention to navbar-->
             <div class="hero-image">
+                <!-- list inline class adds Bootstrap styling to make menu horizontal-->
                 <ul class="menu list-inline">
                     <li class="list-inline-item"><a href="index.html">Facts</a></li>
                     <li class="list-inline-item active"><a href="flights.html">Flights</a></li>
@@ -29,59 +32,67 @@
                     <li class="list-inline-item"><a href="sights.html">Attractions</a></li>
                 </ul>
             </div>
+            <!--section under hero image with info, flights search and results-->
             <div class="row no-gutters">
-               <div class="col-md-4">
+                <div class="col-md-4">
+                    <!--information on how to get from the airport to the city-->
                     <div class="card flight-card spacing">
-                        <img src="assets/images/lennon.jpg" class="card-img-top infoPic" alt="John Lennon Wall" id="lennon">
-                        <img src="assets/images/oldTown.JPG" class="card-img-top infoPic" alt="Old Town square" id="oldTown">
+                        <img src="assets/images/lennon.jpg" class="card-img-top infoPic" alt="John Lennon Wall" id="lennon" />
+                        <img src="assets/images/oldTown.JPG" class="card-img-top infoPic" alt="Old Town square" id="oldTown" />
                         <h5 class="card-title"><i class="fas fa-plane-arrival"></i> Getting to and from the airport</h5>
                         <div class="card-body">
-                          <p class="card-text">To get a taxi from outside the airport termainal it should cost around 600K&#x010D. However it is very easy to do this by public transport. In the arrivals hall head to the <em>Prague Public Transport Authority</em> desk to get a public transport ticket (costs 32K&#x010D). Get on the 119 bus (that runs every 10 minutes), the journey should take about 20 minutes to the Nádraží Veleslavín merto stop (line A). Continue by metro for another 10 to 15 minutes (all on the same ticket that you got at the airport). The maps in the metro train have drawings on them a certain stops to show you what attractions are there, this comes in handy when you're trying to work out what stop you need to get off at.</p>
+                            <p class="card-text">
+                                To get a taxi from outside the airport termainal it should cost around 600kč. However it is very easy to do this by public transport. In the arrivals hall head to the
+                                <em>Prague Public Transport Authority</em> desk to get a public transport ticket (costs 32kč). Get on the 119 bus (that runs every 10 minutes), the journey should take about 20 minutes to the Nádraží
+                                Veleslavín merto stop (line A). Continue by metro for another 10 to 15 minutes (all on the same ticket that you got at the airport). The maps in the metro train have drawings on them a certain stops to show
+                                you what attractions are there, this comes in handy when you're trying to work out what stop you need to get off at.
+                            </p>
                         </div>
                     </div>
-               </div>
-               <div class="col-md-4">
-               <div class="card flight-card search-card spacing">
-               
-               <div id="flight-img">
-                
-                        <img src="assets/images/trdelník.JPG" alt="trdelník" id="trdelník">
-                       
-               </div>
+                </div>
+                <div class="col-md-4">
+                    <!--form to call API and data to fill in URL for API call-->
+                    <div class="card flight-card search-card spacing">
+                        <div id="flight-img">
+                            <img src="assets/images/trdelník.JPG" alt="trdelník" id="trdelnik" />
+                        </div>
                         <div id="flight-form">
-                        <h5 class="card-title">Search for flights to Prague</h5>
-                          <form>
-                            <label for="dep">Departure Date</label>
-                            <input type="date" id="dep" required><br>
-                            <label for="rtn">Return date</label>
-                            <input type="date" id="rtn" required><br>
-                            <label for="airport">Chosen airport</label>
-                            <input id="airport" type="text" placeholder="Enter 3 letter code" required><br>
-                            <button id="fly" class="btn my-btn">Search</button>
-                            <button type="submit" class="btn my-btn">Reset</button>
-                          </form>
-                        </div>
-               </div>
-                    
-               
-               </div>
-               <div class="col-md-4">
-                    <div class="card flight-card spacing">
-                        <img src="assets/images/vitus.JPG" class="card-img-top" alt="St. Vitus Cathederal" id="vitus">
-                        <div class="card-body flights">
-                        <h5 class="card-title">Results... <i class="fas fa-plane-departure"></i></h5>
-                          <p class="card-text" id="flightResults"></p>
+                            <h5 class="card-title">Search for flights to Prague</h5>
+                            <form>
+                                <!--label to show users what data is required-->
+                                <label for="dep">Departure Date</label>
+                                <!--required attribute used to ensure all data is in URL for API call-->
+                                <!-- br tag used to keep lables and input fields together-->
+                                <input type="date" id="dep" required /><br />
+                                <label for="rtn">Return date</label>
+                                <input type="date" id="rtn" required /><br />
+                                <label for="airport">Chosen airport</label>
+                                <input id="airport" type="text" placeholder="Enter 3 letter code" required /><br />
+                                <button id="fly" class="btn my-btn">Search</button>
+                                <!-- type submit with no action refreshes the page-->
+                                <button type="submit" class="btn my-btn">Reset</button>
+                            </form>
                         </div>
                     </div>
-               </div>
+                </div>
+                <div class="col-md-4">
+                    <!-- results from API call-->
+                    <div class="card flight-card spacing">
+                        <img src="assets/images/vitus.JPG" class="card-img-top" alt="St. Vitus Cathederal" id="vitus" />
+                        <div class="card-body flights">
+                            <h5 class="card-title">Results... <i class="fas fa-plane-departure"></i></h5>
+                            <!--empty p tags, filled in using Javascript -->
+                            <p class="card-text" id="flightResults"></p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            
         </section>
         <footer>
             <p>Amy Hollis 2020</p>
         </footer>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script src="assets/js/script.js"></script>
     </body>
 </html>
