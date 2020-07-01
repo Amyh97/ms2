@@ -74,3 +74,5 @@ $("#fly").on("click", function (event) {
         document.getElementById("flightResults").append("The cheapest flight found cost £" + flight + ", flying with " + carrier);
     });
 });
+
+$("#ci").on("click",$( "#datepicker" ).datepicker());

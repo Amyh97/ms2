@@ -7,6 +7,7 @@
         <title>Visit Prague</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+        <link type="text/css" href="css/ui-lightness/jquery-ui-1.9.1.custom.min.css" rel="stylesheet" />
         <link rel="stylesheet" href="assets/css/style.css" />
     </head>
     <body>
@@ -44,7 +45,7 @@
                                 <!--lables to show what data is required-->
                                 <label for="ci">Check-in date</label>
                                 <!-- br used to keep lables and input fields together-->
-                                <input type="date" id="ci" required /><br />
+                                <span id="datepicker"><input type="text" id="ci" required /></span><br />
                                 <label for="rooms">Number of rooms</label>
                                 <!--required used to provent errors as data is used to fill in URL for API call-->
                                 <input type="number" id="rooms" required /><br />
@@ -82,7 +83,8 @@
         <footer>
             <p>Amy Hollis 2020</p>
         </footer>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script src="assets/js/script.js"></script>
     </body>
