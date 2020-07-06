@@ -75,4 +75,13 @@ $("#fly").on("click", function (event) {
     });
 });
 
-$("#ci").on("click",$( "#datepicker" ).datepicker());
+var field = document.getElementById('ci');
+var picker = new Pikaday({
+    onSelect: function(date) {
+        field.value = picker.toString(date, format = 'YYYY-MM-DD');
+    }
+});
+$("#ci").on("click",function() {
+field.parentNode.insertBefore(picker.el, field.nextSibling)});
+    $("#ci").append(picker);
+
