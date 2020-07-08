@@ -23,7 +23,8 @@ $("#convert").on("click", function (event) {
     });
 });
 
-//Hotel API
+//Hotel
+//API call
 $("#searchHotel").on("click", function (event) {
     //preventDefault to stop refresh
     event.preventDefault();
@@ -53,7 +54,8 @@ $("#searchHotel").on("click", function (event) {
     });
 });
 
-//flights API
+//flights 
+    //API call
 $("#fly").on("click", function (event) {
     //preventDefault to stop refresh
     event.preventDefault();
@@ -75,13 +77,40 @@ $("#fly").on("click", function (event) {
     });
 });
 
+//date pickers to populate URLs for API calls
+//formats date
 var field = document.getElementById('ci');
 var picker = new Pikaday({
-    onSelect: function(date) {
-        field.value = picker.toString(date, format = 'YYYY-MM-DD');
+onSelect: function() {
+    field.value = this.getMoment().format('YYYY/MM/DD');
     }
 });
+//adds datepicker element to page when field is clicked
 $("#ci").on("click",function() {
 field.parentNode.insertBefore(picker.el, field.nextSibling)});
     $("#ci").append(picker);
 
+    
+//format date from datepicker
+var field = document.getElementById('dep');
+var picker = new Pikaday({
+onSelect: function() {
+    field.value = this.getMoment().format('YYYY/MM/DD');
+    }
+});
+//only shows datepicker element when input field is clicked
+    $("#dep").on("click",function() {
+field.parentNode.insertBefore(picker.el, field.nextSibling)});
+    $("#dep").append(picker);
+
+    //format date for return date 
+    var field = document.getElementById('rtn');
+var picker = new Pikaday({
+onSelect: function() {
+    field.value = this.getMoment().format('YYYY/MM/DD');
+    }
+});
+    // bings up datepicker element when input field is clicked
+    $("#rtn").on("click",function() {
+field.parentNode.insertBefore(picker.el, field.nextSibling)});
+    $("rtn").append(picker);

@@ -45,7 +45,7 @@
                                 <!--lables to show what data is required-->
                                 <label for="ci">Check-in date <i class="far fa-calendar-alt"></i></label>
                                 <!-- br used to keep lables and input fields together-->
-                                <input type="text" id="ci" placeholder="DD/MM/YYYY" required><br/>
+                                <input type="text" id="ci" placeholder="YYYY/MM/DD" required><br/>
                                 <label for="rooms">Number of rooms</label>
                                 <!--required used to provent errors as data is used to fill in URL for API call-->
                                 <input type="number" id="rooms" required /><br />
@@ -55,7 +55,7 @@
                                 <input type="number" id="nights" required /><br />
                                 <button type="submit" id="searchHotel">Search</button>
                                 <!-- type submit with no action refreshed page-->
-                                <button type="submit">Reset</button>
+                                <button type="reset">Reset</button>
                             </form>
                         </div>
                     </div>
@@ -85,6 +85,7 @@
         </footer>
         <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
         <script src="assets/js/script.js"></script>
     </body>

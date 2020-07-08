@@ -7,6 +7,7 @@
         <title>Visit Prague</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
         <link rel="stylesheet" href="assets/css/style.css" />
     </head>
     <body>
@@ -60,17 +61,17 @@
                             <h5 class="card-title">Search for flights to Prague</h5>
                             <form>
                                 <!--label to show users what data is required-->
-                                <label for="dep">Departure Date</label>
+                                <label for="dep">Departure Date <i class="far fa-calendar-alt"></i></label>
                                 <!--required attribute used to ensure all data is in URL for API call-->
                                 <!-- br tag used to keep lables and input fields together-->
-                                <input type="date" id="dep" required /><br />
-                                <label for="rtn">Return date</label>
-                                <input type="date" id="rtn" required /><br />
+                                <input type="text" id="dep" placeholder="YYYY/MM/DD" required /><br />
+                                <label for="rtn">Return date <i class="far fa-calendar-alt"></i></label>
+                                <input type="text" id="rtn" placeholder="YYYY/MM/DD" required /><br />
                                 <label for="airport">Chosen airport</label>
                                 <input id="airport" type="text" placeholder="Enter 3 letter code" required /><br />
                                 <button id="fly" class="btn my-btn">Search</button>
                                 <!-- type submit with no action refreshes the page-->
-                                <button type="submit" class="btn my-btn">Reset</button>
+                                <button type="reset" class="btn my-btn">Reset</button>
                             </form>
                         </div>
                     </div>
@@ -93,6 +94,8 @@
         </footer>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
         <script src="assets/js/script.js"></script>
     </body>
 </html>
