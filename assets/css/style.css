@@ -184,6 +184,17 @@ footer {
     height: auto;
 }
 
+/*--- datepicker ----*/
+.pika-single {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    display: inline-block;
+}
+ .hide {
+     display: none;
+ }
+
 /*--- media queries---*/
 @media (max-width: 900px) {
     .flag {

@@ -90,27 +90,26 @@ $("#ci").on("click",function() {
 field.parentNode.insertBefore(picker.el, field.nextSibling)});
     $("#ci").append(picker);
 
-    
-//format date from datepicker
+
 var field = document.getElementById('dep');
 var picker = new Pikaday({
 onSelect: function() {
     field.value = this.getMoment().format('YYYY/MM/DD');
     }
 });
-//only shows datepicker element when input field is clicked
-    $("#dep").on("click",function() {
+//adds datepicker element to page when field is clicked
+$("#dep").on("click",function() {
 field.parentNode.insertBefore(picker.el, field.nextSibling)});
     $("#dep").append(picker);
 
-    //format date for return date 
-    var field = document.getElementById('rtn');
-var picker = new Pikaday({
+    
+var cal = document.getElementById('rtn');
+var pick = new Pikaday({
 onSelect: function() {
     field.value = this.getMoment().format('YYYY/MM/DD');
     }
 });
-    // bings up datepicker element when input field is clicked
-    $("#rtn").on("click",function() {
-field.parentNode.insertBefore(picker.el, field.nextSibling)});
-    $("rtn").append(picker);
+//adds datepicker element to page when field is clicked
+$("#rtn").on("click",function() {
+cal.parentNode.insertBefore(pick.el, cal.previousSibling)});
+    $("#rtn").append(pick);
