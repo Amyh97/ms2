@@ -78,6 +78,8 @@ $("#fly").on("click", function (event) {
 });
 
 //date pickers to populate URLs for API calls
+
+var stay = function() {
 //formats date
 var field = document.getElementById('ci');
 var picker = new Pikaday({
@@ -88,8 +90,27 @@ onSelect: function() {
 //adds datepicker element to page when field is clicked
 $("#ci").on("click",function() {
 field.parentNode.insertBefore(picker.el, field.nextSibling)});
-    $("#ci").append(picker);
+}
+    $("#ci").append(stay);
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var departure = function() {
 
 var field = document.getElementById('dep');
 var picker = new Pikaday({
@@ -99,17 +120,21 @@ onSelect: function() {
 });
 //adds datepicker element to page when field is clicked
 $("#dep").on("click",function() {
-field.parentNode.insertBefore(picker.el, field.nextSibling)});
-    $("#dep").append(picker);
+field.parentNode.insertBefore(picker.el, field)});
+}
+$("#dep").append(departure);
 
-    
-var cal = document.getElementById('rtn');
-var pick = new Pikaday({
+//put in separate function so variables are not universal
+var land = function() {
+var field = document.getElementById('rtn');
+//pikaday from extrenal js libary 
+var picker = new Pikaday({
 onSelect: function() {
     field.value = this.getMoment().format('YYYY/MM/DD');
     }
 });
 //adds datepicker element to page when field is clicked
 $("#rtn").on("click",function() {
-cal.parentNode.insertBefore(pick.el, cal.previousSibling)});
-    $("#rtn").append(pick);
+field.parentNode.insertBefore(picker.el, field)});
+}
+$("#rtn").append(land);
