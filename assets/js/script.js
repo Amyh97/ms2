@@ -87,27 +87,16 @@ onSelect: function() {
     field.value = this.getMoment().format('YYYY/MM/DD');
     }
 });
+var pickerOpen = false;
+$('#ci').click(function () {
+    pickerOpen ? picker.hide() : picker.show();
+    pickerOpen = !pickerOpen;
+});
 //adds datepicker element to page when field is clicked
 $("#ci").on("click",function() {
 field.parentNode.insertBefore(picker.el, field.nextSibling)});
 }
     $("#ci").append(stay);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 var departure = function() {
@@ -117,6 +106,11 @@ var picker = new Pikaday({
 onSelect: function() {
     field.value = this.getMoment().format('YYYY/MM/DD');
     }
+});
+var pickerOpen = false;
+$("#dep").click(function () {
+    pickerOpen ? picker.hide() : picker.show();
+    pickerOpen = !pickerOpen;
 });
 //adds datepicker element to page when field is clicked
 $("#dep").on("click",function() {
@@ -132,6 +126,11 @@ var picker = new Pikaday({
 onSelect: function() {
     field.value = this.getMoment().format('YYYY/MM/DD');
     }
+});
+var pickerOpen = false;
+$("#rtn").click(function () {
+    pickerOpen ? picker.hide() : picker.show();
+    pickerOpen = !pickerOpen;
 });
 //adds datepicker element to page when field is clicked
 $("#rtn").on("click",function() {
