@@ -2,6 +2,7 @@
 
 body {
     width: 100%;
+    overflow-x: hidden;
 }
 
 /*--- headers and menu ---*/
@@ -86,6 +87,10 @@ footer {
 
 .table-spacing {
     display: none;
+}
+
+#convetred {
+    margin-top: 10px;
 }
 
 /*--- flights---*/
@@ -236,6 +241,11 @@ footer {
     .flights {
         padding-top: 15%;
     }
+
+    .hotel-card {
+        margin-top: 3rem;
+        margin-bottom: 5rem;
+    }
 }
 
 @media (max-width: 750px) {
@@ -291,4 +301,5 @@ footer {
         font-size: larger;
         padding-right: 5px;
     }
+
 }
