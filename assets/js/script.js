@@ -66,7 +66,7 @@ $("#fly").on("click", function (event) {
 
     data = makeAPICall(`https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browsequotes/v1.0/UK/GBP/en/${airport}-sky/PRG-sky/${dep}?inboundpartialdate=${rtn}`, {
         "x-rapidapi-host": "skyscanner-skyscanner-flight-search-v1.p.rapidapi.com",
-        "x-rapidapi-key": "5016226057msh752c3a66045bae2p13d849jsnd78e30e17efa",
+        "x-rapidapi-key": "8e454c9b0dmshf8a12541aa166abp100ea0jsnb6ef553fc5b2",
     });
     data.then((value) => {
         //use API data to get price and carrier name
@@ -75,7 +75,11 @@ $("#fly").on("click", function (event) {
         //use variables to fill out results section
         document.getElementById("flightResults").append("The cheapest flight found cost £" + flight + ", flying with " + carrier);
     });
+
+  
 });
+
+
 
 //date pickers to populate URLs for API calls
 
@@ -84,7 +88,7 @@ var stay = function() {
 var field = document.getElementById('ci');
 var picker = new Pikaday({
 onSelect: function() {
-    field.value = this.getMoment().format('YYYY/MM/DD');
+    field.value = this.getMoment().format('YYYY-MM-DD');
     }
 });
 var pickerOpen = false;
@@ -104,7 +108,7 @@ var departure = function() {
 var field = document.getElementById('dep');
 var picker = new Pikaday({
 onSelect: function() {
-    field.value = this.getMoment().format('YYYY/MM/DD');
+    field.value = this.getMoment().format('YYYY-MM-DD');
     }
 });
 var pickerOpen = false;
@@ -124,7 +128,7 @@ var field = document.getElementById('rtn');
 //pikaday from extrenal js libary 
 var picker = new Pikaday({
 onSelect: function() {
-    field.value = this.getMoment().format('YYYY/MM/DD');
+    field.value = this.getMoment().format('YYYY-MM-DD');
     }
 });
 var pickerOpen = false;
