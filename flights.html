@@ -61,11 +61,11 @@
                             <h5 class="card-title">Search for flights to Prague</h5>
                             <form>
                                 <!--label to show users what data is required-->
-                                <label for="dep">Departure Date <i class="far fa-calendar-alt"></i></label>
+                                <label for="dep" id="pik">Departure Date <i class="far fa-calendar-alt"></i></label>
                                 <!--required attribute used to ensure all data is in URL for API call-->
                                 <!-- br tag used to keep lables and input fields together-->
                                 <input type="text" id="dep" placeholder="YYYY/MM/DD" required /><br />
-                                <label for="rtn">Return date <i class="far fa-calendar-alt"></i></label>
+                                <label for="rtn" id="pik-rtn">Return date <i class="far fa-calendar-alt"></i></label>
                                 <input type="text" id="rtn" placeholder="YYYY/MM/DD" required /><br />
                                 <label for="airport">Chosen airport</label>
                                 <input id="airport" type="text" placeholder="Enter 3 letter code" required /><br />

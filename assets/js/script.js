@@ -92,7 +92,7 @@ onSelect: function() {
     }
 });
 var pickerOpen = false;
-$('#ci').click(function () {
+$("#pik-date").click(function () {
     pickerOpen ? picker.hide() : picker.show();
     pickerOpen = !pickerOpen;
 });
@@ -112,7 +112,7 @@ onSelect: function() {
     }
 });
 var pickerOpen = false;
-$("#dep").click(function () {
+$("#pik").click(function () {
     pickerOpen ? picker.hide() : picker.show();
     pickerOpen = !pickerOpen;
 });
@@ -132,7 +132,7 @@ onSelect: function() {
     }
 });
 var pickerOpen = false;
-$("#rtn").click(function () {
+$("#pik-rtn").click(function () {
     pickerOpen ? picker.hide() : picker.show();
     pickerOpen = !pickerOpen;
 });
