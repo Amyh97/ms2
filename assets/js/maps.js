@@ -4,7 +4,7 @@ function initMap() {
         center: { lat: 50.0755, lng: 14.4378 },
     });
     //array of lables to be used by markers
-    var labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    var labels = "Castle St.Vitus Charles.Bridge Astronomical.Clock Old.Town.Square Wencelas.Square Powder.Tower Lennon.Wall Dancing.House Tyn.Church";
     //use lables on markers for each location from location array
     var markers = locations.map(function (location, i) {
         return new google.maps.Marker({
@@ -20,8 +20,8 @@ var locations = [
     { lat: 50.0911, lng: 14.4016 },
     { lat: 50.0909, lng: 14.4005 },
     { lat: 50.0865, lng: 14.4114 },
-    { lat: 50.087, lng: 14.4207 },
-    { lat: 50.081, lng: 14.428 },
+    { lat: 50.0876, lng: 14.4207 },
+    { lat: 50.0810, lng: 14.4280 },
     { lat: 50.0873, lng: 14.4278 },
     { lat: 50.0863, lng: 14.4068 },
     { lat: 50.0754, lng: 14.4142 },
