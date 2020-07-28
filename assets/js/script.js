@@ -141,3 +141,7 @@ $("#rtn").on("click",function() {
 field.parentNode.insertBefore(picker.el, field)});
 }
 $("#rtn").append(land);
+
+$(".clear").on("click",function() {
+    $(".clear-area").empty();
+})
