@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato&family=Lobster+Two&display=swap");
 
+/*--- overflow x: hidden to prevent sideways scrolling --*/
 body {
     width: 100%;
     overflow-x: hidden;
@@ -81,6 +82,7 @@ footer {
     margin-top: 10px;
 }
 
+/*-- cb relating to Charles Birdge in the photo --*/
 #cb-card {
     width: 30rem;
 }
@@ -91,6 +93,10 @@ footer {
 
 #convetred {
     margin-top: 10px;
+}
+
+#oldTown2 {
+    display: none;
 }
 
 /*--- flights---*/
@@ -137,6 +143,7 @@ footer {
 }
 
 /*--- attractions---*/
+/*-- need to add height to map as the default for Google maps is 0, so you can't see it ---*/
 #map {
     height: 360px;
     margin: 5px;
@@ -168,10 +175,6 @@ footer {
     font-size: 18px;
 }
 
-#oldTown2 {
-    display: none;
-}
-
 /*---- accomodation ---*/
 
 .hotel-card {
@@ -190,17 +193,20 @@ footer {
 }
 
 /*--- datepicker ----*/
+/*--- pika-single from external css used with the date picker ---*/
 .pika-single {
     margin: 0;
     padding: 0;
     position: absolute;
     display: inline-block;
 }
- .hide {
-     display: none;
- }
+.hide {
+    display: none;
+}
 
 /*--- media queries---*/
+
+/*--- viewports tablet size ---*/
 @media (max-width: 900px) {
     .flag {
         display: none;
@@ -247,7 +253,7 @@ footer {
         margin-bottom: 5rem;
     }
 }
-
+/*--- viewports tablet size or smaller ---*/
 @media (max-width: 750px) {
     .hero-image {
         height: 18rem;
@@ -301,5 +307,4 @@ footer {
         font-size: larger;
         padding-right: 5px;
     }
-
 }

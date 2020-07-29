@@ -7,7 +7,7 @@
         <title>Visit Prague</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css" />
         <link rel="stylesheet" href="assets/css/style.css" />
     </head>
     <body>
@@ -36,7 +36,7 @@
             <!--section under hero image with info, flights search and results-->
             <div class="row no-gutters">
                 <div class="col-md-4">
-                    <!--information on how to get from the airport to the city-->
+                    <!--information on how to get from the airport to the city, use bootstrap card-->
                     <div class="card flight-card spacing">
                         <img src="assets/images/lennon.jpg" class="card-img-top infoPic" alt="John Lennon Wall" id="lennon" />
                         <img src="assets/images/oldTown.JPG" class="card-img-top infoPic" alt="Old Town square" id="oldTown" />
@@ -60,7 +60,7 @@
                         <div id="flight-form">
                             <h5 class="card-title">Search for flights to Prague</h5>
                             <form>
-                                <!--label to show users what data is required-->
+                                <!--label to show users what data is required ID on lebel to close date picker-->
                                 <label for="dep" id="pik">Departure Date <i class="far fa-calendar-alt"></i></label>
                                 <!--required attribute used to ensure all data is in URL for API call-->
                                 <!-- br tag used to keep lables and input fields together-->
@@ -70,7 +70,7 @@
                                 <label for="airport">Chosen airport</label>
                                 <input id="airport" type="text" placeholder="Enter 3 letter code" required /><br />
                                 <button id="fly" class="btn my-btn">Search</button>
-                                <!-- type submit with no action refreshes the page-->
+                                <!-- type rest resets form, class clear used to reset results section-->
                                 <button type="reset" class="btn my-btn clear">Reset</button>
                             </form>
                         </div>
@@ -82,7 +82,7 @@
                         <img src="assets/images/vitus.JPG" class="card-img-top" alt="St. Vitus Cathederal" id="vitus" />
                         <div class="card-body flights">
                             <h5 class="card-title">Results... <i class="fas fa-plane-departure"></i></h5>
-                            <!--empty p tags, filled in using Javascript -->
+                            <!--empty p tags, filled in using Javascript. clear area class name used to reset when user clicks reset -->
                             <p class="card-text clear-area" id="flightResults"></p>
                         </div>
                     </div>

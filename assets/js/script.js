@@ -11,6 +11,7 @@ $("#convert").on("click", function (event) {
     event.preventDefault();
     //amount to populate URL for API call
     var amount = $("#amount").val();
+    //template literals used so jQuery can also be used
     data = makeAPICall(`https://currency-converter13.p.rapidapi.com/convert?amount=${amount}&from=GBP&to=CZK`, {
         "x-rapidapi-host": "currency-converter13.p.rapidapi.com",
         "x-rapidapi-key": "5016226057msh752c3a66045bae2p13d849jsnd78e30e17efa",
@@ -33,6 +34,7 @@ $("#searchHotel").on("click", function (event) {
     var adults = $("#people").val();
     var rooms = $("#rooms").val();
     var nights = $("#nights").val();
+    // call generic function
     data = makeAPICall(`https://tripadvisor1.p.rapidapi.com/hotels/list?offset=0&currency=GBP&limit=30&order=asc&lang=en_US&sort=recommended&location_id=274707&adults=${adults}1&checkin=${ci}&rooms${rooms}1&nights=${nights}`, {
         "x-rapidapi-host": "tripadvisor1.p.rapidapi.com",
         "x-rapidapi-key": "5016226057msh752c3a66045bae2p13d849jsnd78e30e17efa",
@@ -54,12 +56,12 @@ $("#searchHotel").on("click", function (event) {
     });
 });
 
-//flights 
-    //API call
+//flights
+//API call
 $("#fly").on("click", function (event) {
     //preventDefault to stop refresh
     event.preventDefault();
-    //departure and return dates and chosen airport
+    //departure and return dates and chosen airport to fill URL
     var dep = $("#dep").val();
     var rtn = $("#rtn").val();
     var airport = $("#airport").val();
@@ -75,73 +77,79 @@ $("#fly").on("click", function (event) {
         //use variables to fill out results section
         document.getElementById("flightResults").append("The cheapest flight found cost £" + flight + ", flying with " + carrier);
     });
-
-  
 });
 
+//date pickers to populate URLs for API calls, work on all browsers unlike type=date
 
+//all in var stay so nothing is universal and avoid confusion with other date pickers in script.js
+var stay = function () {
+    //formats date, determined by API documentation
+    var field = document.getElementById("ci");
+    var picker = new Pikaday({
+        onSelect: function () {
+            field.value = this.getMoment().format("YYYY-MM-DD");
+        },
+    });
+    //pik-date id on label to close picker
+    var pickerOpen = false;
+    $("#pik-date").click(function () {
+        pickerOpen ? picker.hide() : picker.show();
+        pickerOpen = !pickerOpen;
+    });
+    //adds datepicker element to page when field is clicked
+    $("#ci").on("click", function () {
+        field.parentNode.insertBefore(picker.el, field.nextSibling);
+    });
+};
+$("#ci").append(stay);
 
-//date pickers to populate URLs for API calls
-
-var stay = function() {
-//formats date
-var field = document.getElementById('ci');
-var picker = new Pikaday({
-onSelect: function() {
-    field.value = this.getMoment().format('YYYY-MM-DD');
-    }
-});
-var pickerOpen = false;
-$("#pik-date").click(function () {
-    pickerOpen ? picker.hide() : picker.show();
-    pickerOpen = !pickerOpen;
-});
-//adds datepicker element to page when field is clicked
-$("#ci").on("click",function() {
-field.parentNode.insertBefore(picker.el, field.nextSibling)});
-}
-    $("#ci").append(stay);
-
-
-var departure = function() {
-
-var field = document.getElementById('dep');
-var picker = new Pikaday({
-onSelect: function() {
-    field.value = this.getMoment().format('YYYY-MM-DD');
-    }
-});
-var pickerOpen = false;
-$("#pik").click(function () {
-    pickerOpen ? picker.hide() : picker.show();
-    pickerOpen = !pickerOpen;
-});
-//adds datepicker element to page when field is clicked
-$("#dep").on("click",function() {
-field.parentNode.insertBefore(picker.el, field)});
-}
+// var departure keeps all information to the date picker only for the separture date
+var departure = function () {
+    //format for date determined by API documentation
+    var field = document.getElementById("dep");
+    var picker = new Pikaday({
+        onSelect: function () {
+            field.value = this.getMoment().format("YYYY-MM-DD");
+        },
+    });
+    //pik id on label used to close date picker without opening again when return date picker is opened
+    var pickerOpen = false;
+    $("#pik").click(function () {
+        pickerOpen ? picker.hide() : picker.show();
+        pickerOpen = !pickerOpen;
+    });
+    //adds datepicker element to page when field is clicked
+    $("#dep").on("click", function () {
+        field.parentNode.insertBefore(picker.el, field);
+    });
+};
 $("#dep").append(departure);
 
 //put in separate function so variables are not universal
-var land = function() {
-var field = document.getElementById('rtn');
-//pikaday from extrenal js libary 
-var picker = new Pikaday({
-onSelect: function() {
-    field.value = this.getMoment().format('YYYY-MM-DD');
-    }
-});
-var pickerOpen = false;
-$("#pik-rtn").click(function () {
-    pickerOpen ? picker.hide() : picker.show();
-    pickerOpen = !pickerOpen;
-});
-//adds datepicker element to page when field is clicked
-$("#rtn").on("click",function() {
-field.parentNode.insertBefore(picker.el, field)});
-}
+var land = function () {
+    var field = document.getElementById("rtn");
+    //pikaday from extrenal js libary
+    var picker = new Pikaday({
+        onSelect: function () {
+            //date format determined by API documentation
+            field.value = this.getMoment().format("YYYY-MM-DD");
+        },
+    });
+    //pik-rtn id for label to close date picker and not open departure date picker
+    var pickerOpen = false;
+    $("#pik-rtn").click(function () {
+        pickerOpen ? picker.hide() : picker.show();
+        pickerOpen = !pickerOpen;
+    });
+    //adds datepicker element to page when field is clicked
+    $("#rtn").on("click", function () {
+        field.parentNode.insertBefore(picker.el, field);
+    });
+};
 $("#rtn").append(land);
 
-$(".clear").on("click",function() {
+// reset buttons
+//use classes so same js can be used on hotels.html and flights.html
+$(".clear").on("click", function () {
     $(".clear-area").empty();
-})
+});

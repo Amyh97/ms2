@@ -16,12 +16,13 @@ function initMap() {
     //marker clusterer to manage the markers.
     var markerCluster = new MarkerClusterer(map, markers, { imagePath: "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m" });
 }
+//locations to have markers on
 var locations = [
     { lat: 50.0911, lng: 14.4016 },
     { lat: 50.0909, lng: 14.4005 },
     { lat: 50.0865, lng: 14.4114 },
     { lat: 50.0876, lng: 14.4207 },
-    { lat: 50.0810, lng: 14.4280 },
+    { lat: 50.081, lng: 14.428 },
     { lat: 50.0873, lng: 14.4278 },
     { lat: 50.0863, lng: 14.4068 },
     { lat: 50.0754, lng: 14.4142 },
