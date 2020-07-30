@@ -149,6 +149,9 @@ footer {
     margin: 5px;
 }
 
+#key {
+    width: 95%;
+}
 /*--- cards---*/
 
 .card {
