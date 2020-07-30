@@ -3,8 +3,8 @@ function initMap() {
         zoom: 12,
         center: { lat: 50.0755, lng: 14.4378 },
     });
-    //array of lables to be used by markers
-    var labels = ["Castle", "St Vitus", "Charles Bridge", "Astronomical Clock", "Old Town Square", "Wencelas Square", "Powder Tower", "Lennon Wall", "Dancing House", "Tyn Church"];
+    //lables to be used by markers
+    var labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     //use lables on markers for each location from location array
     var markers = locations.map(function (location, i) {
         return new google.maps.Marker({
