@@ -19,31 +19,42 @@ This website follows the user’s thought process, they are first faced with a f
 When designing this website, I used Balsamiq to create wireframes. This meant that that the development process was more streamlined as I knew what elements I wanted to add to the pages. I kept the header, footer and hero image (with the navigation menu in it) the same across the pages to help add continuity to the site, making it more intuitive and encourage the user to explore the site. These have all changed based on feedback given during the development process. In these original plans I was going to present the data in tables. However, these have changed to cards (created using Bootstrap), this made it easier for users to digest the bite sized bits of information and allowed for better UX as the cards could move and adapt to smaller screen sizes.  In addition, it allowed me to add more photos to the website, showing users what there is to see in Prague and add interest and colour to the pages. 
 
 On my landing page I was going to focus on average weather temperatures and general facts about the country. The original plan was to use an API to get the weather information, but as the averages were unlikely to change  and finding an appropriate API was difficult, I decided to add a currency converter, rather than hard coding in the exchange rate (which will change). 
-<--- index pic ---> 
+
+![wireframe for index page](assets/images/index.png)
 
 The second page that the users see is the flights page. Not only did swapping to cards, from the table improve the overall look of the website, but it also gave me more room to add additional information to the page to help users know how to get from the airport to the city centre. This was due to using the rule of thirds, thus giving me an extra section of the page to add this information. 
 
-<--- flights pic --- >
+![wireframe for flights page](assets/images/flights.png)
 
 With the exception of swapping from the table layout to cards, the accommodation page did not change too much in terms of no extra information or APIs added to this page, this is because there was not any beneficial information that I could have added in a third section of the page. Because of this, I decided to ignore the rule of thirds for this page as adding the third section would add meaningless text and give the users an information overload, most of which would not be relevant or useful. 
-<--- hotels pic --- >
+
+![wireframe for hotels page](assets/images/hotels.png)
 
 The original plan for the sights page was to use TripAdvisor to show peoples’ recommendations, however it was difficult to source an API for this (as each attraction would have a unique code to TripAdvisor that it would use to search) and it didn’t fit with the user stories as it would not show where each of these sights were in relation to each other. As I have been to Prague, I knew what sights are recommended and that they are grouped into two main areas either side of the river. So, I swapped to Google maps (as there is very good documentation with the API) and this allowed me to show users where the attractions are on a map by using clusters that become markers the more the user zooms in.  
 
-< --- sights --- >
+![wireframe for sights page](assets/images/sights.png)
 
 ## Features
 ### Facts
 On the facts page of my website users are drawn to the hero image of the Astronomical clock, on this is a nav bar which used internal hyperlinks to take users to the relevant pages. I used the Bootstrap grid to accomplish the lay out of the cards used on my pages. For this to be effective across different viewports, I had to make use of the display property in CSS to show and hide pictures in order to prevent the images being too small on the smaller viewports. In addition, on a tablet size screen I added a card that is only visible on that screen size and hide two of the cards so that all the weather information is together and readable of all screen sizes. This page contains the simplest of the APIs used. This allows users to enter an amount (in GBP as it is aimed at users from the UK) and it will tell them how many Korunas are in the given number of pounds.
+
+![screenshot of facts page](assets/images/indexDeployed.jpg)
+
 ### Flights
 This page uses the rule of thirds in the information section of the page (under the hero image). Again, for the best UX across different screen sizes I have made use of the display properties in CSS to hide images so that you can see them more clearly. The first of these three cards just contains hard coded information in it. The middle card contains a form. The values entered in this form are fed into the URL for the API call and allows users to pick dates and outbound airport. The results from the API call and some set text then fill the last card to display the results to the user. 
+
+![screenshot of flights page](assets/images/flightsDeployed.jpg)
 
 ### Hotels
 This page simply has two cards on it. If I were to have followed the rule of thirds, I would have ended up adding unnecessary information that would have given users an information overload. Much like the form on the flights page, the data put in this form is fed into the URL (along with some set information, such as the TripAdvisor code for Prague city) for the API call. This API pulls more data compared to the flights’ API. This API pulls up to thirty hotels based on recommendation. In order to give users an overview of hotel prices in the area on their chosen nights, the results card shows the top three hotels and their prices. 
 
+![screenshot of hotels page](assets/images/hotelsDeployed.jpg)
+
 ### Sights
 
 This Page uses the Google maps API, with the marker clusters. I chose the clusters as it then shows users that most of the main attractions are split into two, each side of the river Vltava. This map allows users to zoom in and see where exactly the top attractions are in relation to each other and fit with the user stories for the design of the website. 
+
+![screenshot of sights page](assets/images/sightsDeployed.jpg)
 
 ### Existing Features
 -	This website uses internal hyperlinks, both in the menu and the flag in the top left hand corner of the page(following convention as this is what users expect and improves UX) has an a tag in it that brings users back to index.html. 
