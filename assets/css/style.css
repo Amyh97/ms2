@@ -312,3 +312,25 @@ footer {
         padding-right: 5px;
     }
 }
+
+@media(min-width:1550px) {
+    .hero-image {
+        height: 45rem;
+    }
+
+    .title {
+        font-size: 60px;
+    }
+
+    .flag {
+        height: 95px;
+    }
+
+    .menu {
+        font-size: 45px;
+    }
+
+    .card {
+        padding-bottom: 10px;
+    }
+}
