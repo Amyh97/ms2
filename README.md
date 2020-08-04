@@ -1,5 +1,8 @@
 # Interactive Front End Milestone Project
 ## [Visit Prague](https://amyh97.github.io/ms2/)
+
+![website on different devices](assets/images/responsive.jpg)
+
 This is an interactive website that promotes Prague. The website will take different things, such as temperature and cost,  into consideration when it comes to when to go. It features a series of APIs to help pull data from different sources to inform users about the city and the cost of getting there and staying. 
 
 The goals for this website are to:
@@ -66,18 +69,18 @@ This Page uses the Google maps API, with the marker clusters. I chose the cluste
 -	On the Google maps API I would like to add images on a “:hover” pseudo class so that when the user hovers over an attraction, an image of the attraction is displayed so that the users can get a better sense of what the city has to offer. 
 ## Technologies Used
 To create this website I used HTML, CSS and JavaScript. I used a few different programs to help me create the overall look of the website and used additional libraries to make the coding process easier. 
--	I used GitPod to write my code in.
--	This project has been deployed through and hosted by GitHub.
--	I used Balsamiq to create the wireframes for my design.
--	To help me create the grid layout, header, and other elements such as the cards and buttons I used Bootstrap 4.
--	I used the jQuery library to help simplify the JavaScript.
--	I embellished the site using icons from Fontawsome. I was able to use them to decorate my pages, adding interest to the pages.
--	I used Roboto and Lobster Two from Google Fonts to style my project. I used one for the headings and one for the text. By only using two fonts I have added continuity to my pages.
--	I used Material Design to help pick my colour scheme and find the hex codes for the colours that I used. Not only did it help me find the hex code for the main colour that I wanted, but it also gave the hex codes for a shade darker and lighter so that I could vary the website, while still having that consistency.
--	In order to create the best UX possible I did not want users to have to wait a long time for the browser to load large image files, so I used Tiny PNG to compress my images so browsers only had to deal with smaller file sizes, therefore load faster.
--	Once I had finished coding I used this HTML Formatter to ensure that my code was properly laid out and easier to read, this site also formats CSS and JavaScript. 
--	I used the W3C validators to help test my code. I used the HTML validator and the CSS validator to ensure that both coding languages were correct.
--	The date picker used in  the forms was created with the use of the JavaScript and CSS files from https://github.com/Pikaday/Pikaday
+-	I used [GitPod](https://gitpod.io/workspaces/) to write my code in.
+-	This project has been deployed through and hosted by [GitHub](https://github.com/).
+-	I used [Balsamiq](https://balsamiq.com/?gclid=CjwKCAjwjqT5BRAPEiwAJlBuBWS7gwxU2CwzIIQKTr3liqAj35kds0gdu5dBRsLiNu20G6y7yfPAnBoC08kQAvD_BwE) to create the wireframes for my design.
+-	To help me create the grid layout, header, and other elements such as the cards and buttons I used [Bootstrap](https://getbootstrap.com/docs/4.5/getting-started/introduction/).
+-	I used the [jQuery](https://jquery.com/) library to help simplify the JavaScript.
+-	I embellished the site using icons from [Fontawsome](https://fontawesome.com/). I was able to use them to decorate my pages, adding interest to the pages.
+-	I used Roboto and Lobster Two from [Google Fonts](https://fonts.google.com/) to style my project. I used one for the headings and one for the text. By only using two fonts I have added continuity to my pages.
+-	I used [Material Design](https://material.io/resources/color/#!/?view.left=0&view.right=0&primary.color=BF360C&secondary.color=1DE9B6) to help pick my colour scheme and find the hex codes for the colours that I used. Not only did it help me find the hex code for the main colour that I wanted, but it also gave the hex codes for a shade darker and lighter so that I could vary the website, while still having that consistency.
+-	In order to create the best UX possible I did not want users to have to wait a long time for the browser to load large image files, so I used [Tiny PNG](https://tinypng.com/) to compress my images so browsers only had to deal with smaller file sizes, therefore load faster.
+-	Once I had finished coding I used this [HTML Formatter](https://webformatter.com/html) to ensure that my code was properly laid out and easier to read, this site also formats CSS and JavaScript. 
+-	I used the W3C validators to help test my code. I used the [HTML validator](https://validator.w3.org/) and the [CSS validator](https://jigsaw.w3.org/css-validator/) to ensure that both coding languages were correct.
+-	The date picker used in  the forms was created with the use of the JavaScript and CSS files from [Pikaday](https://github.com/Pikaday/Pikaday)
 ## Testing 
 
 During the development of the project I constantly looked to the problems section on GitPod to help develop the JavaScript and ensure there were no errors. I then started by testing the usability of the website, I started by testing that the internal links to the various web pages all worked and took me to the correct page. I then checked that all the API calls returned responses as expected, I then ran the HTML and CSS through the W3C validators. When I ran my code through the W3C HTML validator I got a warning about the input type of “date” as this is not supported by all browsers. In order to overcome this, I decided to add a date picker using an external JavaScript file and CSS file. I then found that the API call were not working and returned the following error message “Uncaught (in promise) SyntaxError: JSON.parse: unexpected end of data at line 1 column 1 of the JSON data”.  What I then found was I had formatted the date from the date picker separating the date with a forward slash rather than a dash as the URL required, once this was changed I was getting the expected responses from the API calls.  When I ran the code through the HTML validator again, I only had one remaining warning. On sights.html there is a warning that there is no h2-h6 tag in the main section of the webpage. However, this was done on purpose as the layout of that page did not require one and I did not want to put empty h tags in my code as it would not have done anything. 
@@ -90,7 +93,7 @@ For the final part of my testing I tried to break the website to see what I coul
 ## Issues and resolutions
 During the planning process I was going to create a website to help users pick a country to go on holiday to, however this was not feasible as finding appropriate APIs was difficult. In order to overcome this, I decided to change the scope of the website and focus on giving the users more information about one city. Not only did this allow me to add more detailed information to the pages, but it was also easier to source useful APIs as there was only one focus and not trying to find one API to cover the whole world. 
 
-Deployment
+## Deployment
 To deploy this page to GitHub Pages from its GitHub repository, the following steps were taken:
 1.	From the menu items near the top of the page, select Settings.
 2.	Scroll down to the GitHub Pages section.
@@ -110,14 +113,15 @@ Further reading and troubleshooting on cloning a repository from GitHub here.
 
 ## Credits 
 ### Content
--	The code for the Google maps [https://developers.google.com/maps/documentation/javascript/tutorial] API came from the documentation that comes with the API.
--	The currency converter API came from  Currency Exchange [https://rapidapi.com/fyhao/api/currency-exchange]via Rapid API.
--	The information for the weather averages came from Time and Date [https://www.timeanddate.com/weather/czech-republic/prague/climate]
--	The Flights API comes from Skyscanner via Rapid API [https://rapidapi.com/skyscanner/api/]
--	For the hotel API I went onto Rapid API and used the TripAdvisor [https://rapidapi.com/apidojo/api/tripadvisor1] API. 
+-	The code for the [Google maps](https://developers.google.com/maps/documentation/javascript/tutorial) API came from the documentation that comes with the API.
+-	The currency converter API came from  [Currency Exchange](https://rapidapi.com/fyhao/api/currency-exchange) via Rapid API.
+-	The information for the weather averages came from [Time and Date](https://www.timeanddate.com/weather/czech-republic/prague/climate)
+-	The Flights API comes from Skyscanner via [Rapid API](https://rapidapi.com/skyscanner/api/)
+-	For the hotel API I went onto Rapid API and used the [TripAdvisor](https://rapidapi.com/apidojo/api/tripadvisor1) API. 
 -	Other information, mainly on index.html, but also the information on how to get to and from the airport came from the Lonely Planet Eastern Europe guidebook. 
 ### Media 
--	The flag icon in the top right-hand corner of the pages came from Wikimedia [https://commons.wikimedia.org/wiki/File:Flag_of_the_Czech_Republic_(bordered).svg]
+-	The flag icon in the top right-hand corner of the pages came from [Wikimedia](https://commons.wikimedia.org/wiki/File:Flag_of_the_Czech_Republic_(bordered).svg)
+- I used [Am I responsive?](http://ami.responsivedesign.is/?url=https%3A%2F%2Famyh97.github.io%2Fms2%2F#) for the image at the top of the Readme file.
 -	All other images used on the website are my own photos that I put into my GitHub repository 
 
 ## Acknowledgements
