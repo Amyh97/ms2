@@ -137,7 +137,7 @@ var land = function () {
     });
     //pik-rtn id for label to close date picker and not open departure date picker
     var pickerOpen = false;
-    $("#pik-rtn").click(function () {
+    $("#pikRtn").click(function () {
         pickerOpen ? picker.hide() : picker.show();
         pickerOpen = !pickerOpen;
     });
@@ -151,5 +151,11 @@ $("#rtn").append(land);
 // reset buttons
 //use classes so same js can be used on hotels.html and flights.html
 $(".clear").on("click", function () {
-    $(".clear-area").empty();
+    $(".clearArea").empty();
 });
+
+$(".results").hide();
+$(".closeInstructions").click(function() {
+    $(".instructions").hide()
+    $(".results").show()
+})

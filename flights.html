@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="assets/css/style.css" />
     </head>
     <body>
-         <header>
+        <header>
             <!-- bootstrap grid to put flag on left andmenu in the same row-->
             <div class="row">
                 <a href="index.html" class="col-md-2">
@@ -19,12 +19,12 @@
                 </a>
                 <div class="col-md-10">
                     <!-- list inline class adds Bootstrap styling to make menu horizontal-->
-                <ul class="menu list-inline">
-                    <li class="list-inline-item"><a href="index.html">Facts</a></li>
-                    <li class="list-inline-item active"><a href="flights.html">Flights</a></li>
-                    <li class="list-inline-item"><a href="hotels.html">Accommodation</a></li>
-                    <li class="list-inline-item"><a href="sights.html">Attractions</a></li>
-                </ul>
+                    <ul class="menu list-inline">
+                        <li class="list-inline-item"><a href="index.html">Facts</a></li>
+                        <li class="list-inline-item active"><a href="flights.html">Flights</a></li>
+                        <li class="list-inline-item"><a href="hotels.html">Accommodation</a></li>
+                        <li class="list-inline-item"><a href="sights.html">Attractions</a></li>
+                    </ul>
                 </div>
             </div>
         </header>
@@ -37,7 +37,7 @@
             <div class="row no-gutters">
                 <div class="col-md-4">
                     <!--information on how to get from the airport to the city, use bootstrap card-->
-                    <div class="card flight-card spacing">
+                    <div class="card flightCard spacing">
                         <img src="assets/images/lennon.jpg" class="card-img-top infoPic" alt="John Lennon Wall" id="lennon" />
                         <img src="assets/images/oldTown.JPG" class="card-img-top infoPic" alt="Old Town square" id="oldTown" />
                         <h5 class="card-title"><i class="fas fa-plane-arrival"></i> Getting to and from the airport</h5>
@@ -53,7 +53,7 @@
                 </div>
                 <div class="col-md-4">
                     <!--form to call API and data to fill in URL for API call-->
-                    <div class="card flight-card search-card spacing">
+                    <div class="card flightCard spacing">
                         <div id="flight-img">
                             <img src="assets/images/trdelník.JPG" alt="trdelník" id="trdelnik" />
                         </div>
@@ -65,25 +65,28 @@
                                 <!--required attribute used to ensure all data is in URL for API call-->
                                 <!-- br tag used to keep lables and input fields together-->
                                 <input type="text" id="dep" placeholder="YYYY/MM/DD" required /><br />
-                                <label for="rtn" id="pik-rtn">Return date <i class="far fa-calendar-alt"></i></label>
+                                <label for="rtn" id="pikRtn">Return date <i class="far fa-calendar-alt"></i></label>
                                 <input type="text" id="rtn" placeholder="YYYY/MM/DD" required /><br />
                                 <label for="airport">Chosen airport</label>
                                 <input id="airport" type="text" placeholder="Enter 3 letter code" required /><br />
-                                <button id="fly" class="btn my-btn">Search</button>
+                                <button id="fly" class="btn myBtn">Search</button>
                                 <!-- type rest resets form, class clear used to reset results section-->
-                                <button type="reset" class="btn my-btn clear">Reset</button>
+                                <button type="reset" class="btn myBtn clear">Reset</button>
                             </form>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <!-- results from API call-->
-                    <div class="card flight-card spacing">
+                    <div class="card flightCard spacing">
                         <img src="assets/images/vitus.JPG" class="card-img-top" alt="St. Vitus Cathederal" id="vitus" />
                         <div class="card-body flights">
-                            <h5 class="card-title">Results... <i class="fas fa-plane-departure"></i></h5>
+                            <h5 class="card-title instructions">Instructions...</h5>
+                            <p class="card-text instructions">Click on the box for the date to open a date picker. Once you have selected your date double click on "Departure Date" or "Return Date" to close the relevant date picker.</p>
+                            <button class="btn myBtn closeInstructions instructions">Close Instructions</button>
                             <!--empty p tags, filled in using Javascript. clear area class name used to reset when user clicks reset -->
-                            <p class="card-text clear-area" id="flightResults"></p>
+                            <h5 class="card-title results">Results... <i class="fas fa-plane-departure"></i></h5>
+                            <p class="card-text clearArea" id="flightResults"></p>
                         </div>
                     </div>
                 </div>

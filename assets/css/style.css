@@ -111,12 +111,12 @@ footer {
 /*--- flights---*/
 
 #vitus {
-    max-width: 260px;
+    max-width: 255px;
     height: auto;
 }
 
 #trdelnik {
-    max-width: 180px;
+    max-width: 190px;
     height: auto;
 }
 
@@ -126,13 +126,14 @@ footer {
     padding-left: 55px;
 }
 
+
 .flights {
     position: relative;
     float: right;
     max-width: 40%;
     clear: both;
     margin: 0;
-    padding-top: 25%;
+    padding-top: 15%;
     padding-left: 5px;
     text-align: left;
 }
@@ -141,9 +142,6 @@ footer {
     font-size: large;
 }
 
-.search-card {
-    height: 35rem;
-}
 
 #flight-img {
     clear: both;
@@ -171,11 +169,12 @@ footer {
     width: 20rem;
 }
 
-.flight-card {
+.flightCard {
     width: 45rem;
+    height: 35rem;
 }
 
-.my-btn {
+.myBtn {
     background-color: #dd2c00;
     border-radius: 3px;
     color: #fff;
