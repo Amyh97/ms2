@@ -79,22 +79,29 @@ footer {
 }
 
 .spacing {
-    margin-left: 20px;
-    margin-bottom: 12px;
-    margin-top: 10px;
+   margin: 10px 20px 12px 20px;
 }
 
-/*-- cb relating to Charles Birdge in the photo --*/
-#cb-card {
-    width: 30rem;
+.pushDown {
+    padding-top: 20px;
 }
 
-.table-spacing {
+.table {
+    font-size: 20px;
+}
+.myCard {
+    width: 27rem !important;
+    height: 35rem;
+    
+}
+
+.fullYear {
     display: none;
 }
 
 #convetred {
-    margin-top: 10px;
+    margin-top: 15px;
+    font-size: 20px;
 }
 
 #oldTown2 {
