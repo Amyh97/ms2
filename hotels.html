@@ -12,19 +12,19 @@
     </head>
     <body>
         <header>
-            <!-- bootstrap grid to put flag on left andmenu in the same row-->
+            <!-- bootstrap grid to put flag on left and menu in the same row-->
             <div class="row">
                 <a href="index.html" class="col-md-2">
                     <div class="flag"></div>
                 </a>
                 <div class="col-md-10">
                     <!-- list inline class adds Bootstrap styling to make menu horizontal-->
-                <ul class="menu list-inline">
-                    <li class="list-inline-item"><a href="index.html">Facts</a></li>
-                    <li class="list-inline-item"><a href="flights.html">Flights</a></li>
-                    <li class="list-inline-item active"><a href="hotels.html">Accommodation</a></li>
-                    <li class="list-inline-item"><a href="sights.html">Attractions</a></li>
-                </ul>
+                    <ul class="menu list-inline">
+                        <li class="list-inline-item"><a href="index.html">Facts</a></li>
+                        <li class="list-inline-item"><a href="flights.html">Flights</a></li>
+                        <li class="list-inline-item active"><a href="hotels.html">Accommodation</a></li>
+                        <li class="list-inline-item"><a href="sights.html">Attractions</a></li>
+                    </ul>
                 </div>
             </div>
         </header>
@@ -53,9 +53,9 @@
                                 <input id="people" required type="number" /><br />
                                 <label for="nights">Number of nights</label>
                                 <input type="number" id="nights" required /><br />
-                                <button type="submit" class="my-btn btn" id="searchHotel">Search</button>
+                                <button type="submit" class="myBtn btn" id="searchHotel">Search</button>
                                 <!-- type reset rests form, class name clear used to reset results area-->
-                                <button type="reset" class="my-btn btn clear">Reset</button>
+                                <button type="reset" class="myBtn btn clear">Reset</button>
                             </form>
                         </div>
                     </div>
@@ -65,8 +65,8 @@
                     <div class="card hotel-card">
                         <div class="card-body">
                             <!-- results from API-->
-                            <h2>Results</h2>
-                            <div class="card-text">
+                            <h2 class="card-title results">Results <i class="fas fa-suitcase"></i></h2>
+                            <div class="card-text results">
                                 <h4>Top three hotels on Tripadvisor for these dates:</h4>
                                 <!--ol used to show the top 3 recommended hotels-->
                                 <ol>
@@ -76,6 +76,11 @@
                                     <li id="thotel" class="clear-area"></li>
                                 </ol>
                             </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title instructions">Instructions...</h5>
+                            <p class="card-text instructions">Click on the box for the date to open a date picker. Once you have selected your date double click on "Check In Date" to close the date picker.</p>
+                            <button class="btn myBtn closeInstructions instructions">Close Instructions</button>
                         </div>
                     </div>
                 </div>
