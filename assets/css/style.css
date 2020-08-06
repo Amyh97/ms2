@@ -221,12 +221,12 @@ footer {
 
  /*--- for large computer screens ---*/
 @media(min-width:1550px) {
-    .hero-image {
+    .heroImage {
         height: 45rem;
     }
 
     .title {
-        font-size: 60px;
+        font-size: 100x;
     }
 
     .flag {
@@ -234,11 +234,19 @@ footer {
     }
 
     .menu {
-        font-size: 45px;
+        font-size: 40px;
     }
 
     .card {
         padding-bottom: 10px;
+    }
+
+    #map {
+        height: 400px;
+    }
+
+    #key {
+        padding-top: 20px;
     }
 }
 
@@ -246,7 +254,7 @@ footer {
 
 /*--- viewports tablet size ---*/
 @media (max-width: 1030px) {
-    .hero-image {
+    .heroImage {
         height: 18rem;
         margin-top: 5px;
     }
@@ -285,6 +293,11 @@ footer {
         height: 600px;;
     }
 
+    .flightCard {
+        width: 70%;
+        margin-left: 30px;
+    }
+
 }
 
 
@@ -292,7 +305,7 @@ footer {
 /*--- mobile size viewport ---*/
 
 @media (max-width:500px) {
-    #tyn {
+    #tyn, #vitus  {
         width: 195px;
     }
 
@@ -325,7 +338,7 @@ footer {
         display: block;
     }
 
-    .fullYear {
+    .fullYear, .infoPic {
         display: none;
     }
 
@@ -341,5 +354,28 @@ footer {
 
     #key th {
         font-size: 16px;
+    }
+
+    .flightCard {
+        height: 45rem;
+        width: 80%;
+    }
+
+    #flightForm {
+        display: inline-block;
+    }
+
+    .flights {
+        height: auto;
+    }
+
+    #flightResultCard {
+        height: 26rem;
+        overflow: auto;
+    }
+
+     
+    #trdelnik, #vitus {
+        max-width: 136px;;
     }
 }
