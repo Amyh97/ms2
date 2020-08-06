@@ -40,19 +40,14 @@ $("#searchHotel").on("click", function (event) {
         "x-rapidapi-key": "5016226057msh752c3a66045bae2p13d849jsnd78e30e17efa",
     });
     data.then((value) => {
-        //name and price of hotel 1
-        var fhotelName = value.data[0].name;
-        var fhotelPrice = value.data[0].price;
-        //name and price of hotel 2
-        var shotelName = value.data[1].name;
-        var shotelPrice = value.data[1].price;
-        //name and price of hotel 3
-        var thotelName = value.data[2].name;
-        var thotelPrice = value.data[2].price;
+        //pick hotels from array of data returned
+        var firstHotel = value.data[0];
+        var secondHotel = value.data[1];
+        var thirdHotel = value.data[2];
         //use API data to fill in results area for all 3 hotels
-        document.getElementById("fhotel").append(fhotelName + " costing around " + fhotelPrice);
-        document.getElementById("shotel").append(shotelName + " costing around " + shotelPrice);
-        document.getElementById("thotel").append(thotelName + " costing around " + thotelPrice);
+        document.getElementById("fhotel").append(firstHotel.name + " costing around " + firstHotel.price);
+        document.getElementById("shotel").append(secondHotel.name + " costing around " + secondHotel.price);
+        document.getElementById("thotel").append(thirdHotel.name + " costing around " + thirdHotel.price);
     });
 });
 
@@ -154,6 +149,7 @@ $(".clear").on("click", function () {
     $(".clearArea").empty();
 });
 
+//instructions and results
 $(".results").hide();
 $(".closeInstructions").click(function() {
     $(".instructions").hide()
