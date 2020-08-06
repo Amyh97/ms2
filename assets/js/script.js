@@ -6,7 +6,7 @@ async function makeAPICall(url, headers) {
         headers,
     });
     return response.json();
-};
+}
 
 // reset buttons
 //use classes so same js can be used on hotels.html and flights.html
@@ -16,7 +16,7 @@ $(".clear").on("click", function () {
 
 //hide instructions and show results
 $(".results").hide();
-$(".closeInstructions").click(function() {
-    $(".instructions").hide()
-    $(".results").show()
-})
+$(".closeInstructions").click(function () {
+    $(".instructions").hide();
+    $(".results").show();
+});

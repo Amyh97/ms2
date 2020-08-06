@@ -20,7 +20,6 @@ $("#fly").on("click", function (event) {
     });
 });
 
-
 // var departure keeps all information to the date picker only for the separture date
 var departure = function () {
     //format for date determined by API documentation

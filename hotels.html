@@ -36,34 +36,9 @@
             <!-- section under hero image with hotel search and results sections in cards-->
             <div class="row no gutters">
                 <div class="col-lg-5 offset-lg-1 spacing">
-                    <div class="card hotelCard">
-                        <img src="assets/images/goldenLane.JPG" class="card-img-top" alt="Golden Lane" id="goldenLane" />
-                        <img src="assets/images/charlesb.JPG" class="card-img-top" alt="Charles Bridge" id="charlesb" />
-                        <div class="card-body">
-                            <!--search, values from form used to fill in URL for API call-->
-                            <form class="hotelForm">
-                                <!--lables to show what data is required. ID on label used to cloe date picker-->
-                                <label for="checkIn" id="pikDate">Check-in date <i class="far fa-calendar-alt"></i></label>
-                                <!-- br used to keep lables and input fields together-->
-                                <input type="text" id="checkIn" placeholder="YYYY-MM-DD" required /><br />
-                                <label for="rooms">Number of rooms</label>
-                                <!--required used to provent errors as data is used to fill in URL for API call-->
-                                <input type="number" id="rooms" required /><br />
-                                <label for="people">Number of Adults</label>
-                                <input id="people" required type="number" min="1"/><br />
-                                <label for="nights">Number of nights</label>
-                                <input type="number" min="1" id="nights" required /><br />
-                                <button type="submit" class="myBtn btn" id="searchHotel">Search</button>
-                                <!-- type reset rests form, class name clear used to reset results area-->
-                                <button type="reset" class="myBtn btn clear">Reset</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-5 offset-lg-1 spacing">
                     <!-- Bootstrap card-->
                     <div class="card hotelCard">
-                    <img src="assets/images/charlesb.JPG" class="card-img-top" alt="Charles Bridge" id="charlesBridgeTablet" />
+                        <img src="assets/images/charlesb.JPG" class="card-img-top" alt="Charles Bridge" id="charlesBridgeTablet" />
                         <div class="card-body">
                             <!-- results from API-->
                             <h2 class="card-title results">Results <i class="fas fa-suitcase"></i></h2>
@@ -80,8 +55,35 @@
                         </div>
                         <div class="card-body">
                             <h5 class="card-title instructions">Instructions...</h5>
-                            <p class="card-text instructions">Click on the box for the date to open a date picker. Once you have selected your date double click on "Check In Date" to close the date picker. Close the instructions to see the results.</p>
+                            <p class="card-text instructions">
+                                Click on the box for the date to open a date picker. Once you have selected your date double click on "Check In Date" to close the date picker. Close the instructions to see the results.
+                            </p>
                             <button class="btn myBtn closeInstructions instructions">Close Instructions</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 offset-lg-1 spacing">
+                    <div class="card hotelCard">
+                        <img src="assets/images/goldenLane.JPG" class="card-img-top" alt="Golden Lane" id="goldenLane" />
+                        <img src="assets/images/charlesb.JPG" class="card-img-top" alt="Charles Bridge" id="charlesb" />
+                        <div class="card-body">
+                            <!--search, values from form used to fill in URL for API call-->
+                            <form class="hotelForm">
+                                <!--lables to show what data is required. ID on label used to cloe date picker-->
+                                <label for="checkIn" id="pikDate">Check-in date <i class="far fa-calendar-alt"></i></label>
+                                <!-- br used to keep lables and input fields together-->
+                                <input type="text" id="checkIn" placeholder="YYYY-MM-DD" required /><br />
+                                <label for="rooms">Number of rooms</label>
+                                <!--required used to provent errors as data is used to fill in URL for API call-->
+                                <input type="number" id="rooms" required /><br />
+                                <label for="people">Number of Adults</label>
+                                <input id="people" required type="number" min="1" /><br />
+                                <label for="nights">Number of nights</label>
+                                <input type="number" min="1" id="nights" required /><br />
+                                <button type="submit" class="myBtn btn" id="searchHotel">Search</button>
+                                <!-- type reset rests form, class name clear used to reset results area-->
+                                <button type="reset" class="myBtn btn clear">Reset</button>
+                            </form>
                         </div>
                     </div>
                 </div>
