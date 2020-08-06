@@ -218,112 +218,6 @@ footer {
 
 /*--- media queries---*/
 
-/*--- viewports tablet size ---*/
-@media (max-width: 900px) {
-    .flag {
-        display: none;
-    }
-
-    .title {
-        padding-bottom: 15px;
-    }
-
-    #goldenLane,
-    #charlesb {
-        max-width: 300px;
-    }
-
-    .card {
-        width: 90%;
-    }
-
-    #tyn {
-        max-width: 200px;
-    }
-
-    #oldTown2 {
-        max-width: 300px;
-        display: block;
-    }
-
-    .table-spacing {
-        display: block;
-        margin-left: 20px;
-        margin-bottom: 10px;
-    }
-
-    .halfYear {
-        display: none;
-    }
-
-    .flights {
-        padding-top: 15%;
-    }
-
-    .hotel-card {
-        margin-top: 3rem;
-        margin-bottom: 5rem;
-    }
-}
-/*--- viewports tablet size or smaller ---*/
-@media (max-width: 1030px) {
-    .hero-image {
-        height: 18rem;
-        margin-top: 5px;
-    }
-
-    .menu {
-        padding-left: 10%
-    }
-
-    .card {
-        width: 85%;
-    }
-
-    #tyn {
-        max-width: 285px;
-    }
-
-    #convert {
-        float: right;
-    }
-
-    #charlesBridge,
-    #lennon,
-    #goldenLane {
-        max-width: 290px;
-    }
-
-    #trdelnik,
-    #vitus {
-        max-width: 150px;
-    }
-
-    #oldTown,
-    #oldTown2,
-    #charlesb {
-        display: none;
-    }
-
-    .search-card {
-        height: 45rem;
-    }
-
-    #flight-form {
-        float: none;
-        clear: both;
-        padding-top: 10px;
-    }
-
-    .table-spacing {
-        display: none;
-    }
-
-    #flightResults {
-        font-size: larger;
-        padding-right: 5px;
-    }
-}
  /*--- for large computer screens ---*/
 @media(min-width:1550px) {
     .hero-image {
@@ -344,5 +238,89 @@ footer {
 
     .card {
         padding-bottom: 10px;
+    }
+}
+
+
+
+/*--- viewports tablet size ---*/
+@media (max-width: 1030px) {
+    .hero-image {
+        height: 18rem;
+        margin-top: 5px;
+    }
+
+    .flag {
+        display: none;
+    }
+
+    .menu {
+        padding-left: 5%;
+    }
+
+    .halfYear {
+        display: none;
+    }
+
+    .fullYear {
+        display: block;
+        width: 85%;
+        height: 40rem;
+        clear: both;
+        margin: 4rem;
+    }
+
+    .myCard {
+        height: 40rem;
+        width: 45rem;
+        margin-bottom: 15px;
+    }
+
+    #money {
+        margin-left: 60%;
+    }
+
+}
+
+
+
+/*--- mobile size viewport ---*/
+
+@media (max-width:500px) {
+    #tyn {
+        width: 195px;
+    }
+
+    .myCard {
+        height: 40rem;
+    }
+    
+    #money {
+        margin-left: 0;
+    }
+
+    #oldTown2, #charlesBridge {
+        width: 260px;
+    }
+
+    #convert {
+        float: none;
+    }
+
+    .pushDown {
+
+        padding: 0;
+    }
+
+    .pushDown h2 {
+        margin-top: 10px;
+    }
+
+    .halfYear {
+        display: block;
+    }
+
+    .fullYear {
+        display: none;
     }
 }
