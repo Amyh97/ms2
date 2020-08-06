@@ -35,7 +35,7 @@
             </div>
             <!-- section under hero image with hotel search and results sections in cards-->
             <div class="row no gutters">
-                <div class="col-md-5 offset-md-1 spacing">
+                <div class="col-lg-5 offset-lg-1 spacing">
                     <div class="card hotelCard">
                         <img src="assets/images/goldenLane.JPG" class="card-img-top" alt="Golden Lane" id="goldenLane" />
                         <img src="assets/images/charlesb.JPG" class="card-img-top" alt="Charles Bridge" id="charlesb" />
@@ -50,9 +50,9 @@
                                 <!--required used to provent errors as data is used to fill in URL for API call-->
                                 <input type="number" id="rooms" required /><br />
                                 <label for="people">Number of Adults</label>
-                                <input id="people" required type="number" /><br />
+                                <input id="people" required type="number" min="1"/><br />
                                 <label for="nights">Number of nights</label>
-                                <input type="number" id="nights" required /><br />
+                                <input type="number" min="1" id="nights" required /><br />
                                 <button type="submit" class="myBtn btn" id="searchHotel">Search</button>
                                 <!-- type reset rests form, class name clear used to reset results area-->
                                 <button type="reset" class="myBtn btn clear">Reset</button>
@@ -60,9 +60,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-5 offset-md-1 spacing">
+                <div class="col-lg-5 offset-lg-1 spacing">
                     <!-- Bootstrap card-->
                     <div class="card hotelCard">
+                    <img src="assets/images/charlesb.JPG" class="card-img-top" alt="Charles Bridge" id="charlesBridgeTablet" />
                         <div class="card-body">
                             <!-- results from API-->
                             <h2 class="card-title results">Results <i class="fas fa-suitcase"></i></h2>

@@ -104,7 +104,7 @@ footer {
     font-size: 20px;
 }
 
-#oldTown2 {
+#oldTown2, #charlesBridgeTablet {
     display: none;
 }
 
@@ -248,6 +248,16 @@ footer {
     #key {
         padding-top: 20px;
     }
+
+    #charlesb {
+        display: none;
+    }
+
+     #charlesBridgeTablet {
+        display: inline;
+        max-width: 240px;
+        height: auto;
+    }
 }
 
 
@@ -255,19 +265,15 @@ footer {
 /*--- viewports tablet size ---*/
 @media (max-width: 1030px) {
     .heroImage {
-        height: 18rem;
+        height: 24rem;
         margin-top: 5px;
-    }
-
-    .flag {
-        display: none;
     }
 
     .menu {
         padding-left: 5%;
     }
 
-    .halfYear {
+    .halfYear, .flag, #charlesb {
         display: none;
     }
 
@@ -293,9 +299,19 @@ footer {
         height: 600px;;
     }
 
+    .hotelCard {
+        margin-top: 2rem;
+    }
+
     .flightCard {
         width: 70%;
         margin-left: 30px;
+    }
+
+    #charlesBridgeTablet {
+        display: inline;
+        max-width: 240px;
+        height: auto;
     }
 
 }
@@ -338,7 +354,7 @@ footer {
         display: block;
     }
 
-    .fullYear, .infoPic {
+    .fullYear, .infoPic, #charlesBridgeTablet {
         display: none;
     }
 
@@ -377,5 +393,13 @@ footer {
      
     #trdelnik, #vitus {
         max-width: 136px;;
+    }
+
+    .hotelCard {
+        width: 75%;
+    }
+
+    .pika-single {
+        position: relative;
     }
 }
