@@ -30,7 +30,7 @@
         </header>
         <section>
             <!-- hero image with title-->
-            <div class="hero-image no-gutters">
+            <div class="heroImage no-gutters">
                 <h1 class="title">Prague</h1>
             </div>
             <!--section under hero image with info, flights search and results-->
@@ -54,7 +54,7 @@
                 <div class="col-md-4">
                     <!--form to call API and data to fill in URL for API call-->
                     <div class="card flightCard spacing">
-                        <div id="flight-img">
+                        <div id="flightImg">
                             <img src="assets/images/trdelník.JPG" alt="trdelník" id="trdelnik" />
                         </div>
                         <div id="flight-form">
@@ -64,9 +64,9 @@
                                 <label for="dep" id="pik">Departure Date <i class="far fa-calendar-alt"></i></label>
                                 <!--required attribute used to ensure all data is in URL for API call-->
                                 <!-- br tag used to keep lables and input fields together-->
-                                <input type="text" id="dep" placeholder="YYYY/MM/DD" required /><br />
+                                <input type="text" id="dep" placeholder="YYYY-MM-DD" required /><br />
                                 <label for="rtn" id="pikRtn">Return date <i class="far fa-calendar-alt"></i></label>
-                                <input type="text" id="rtn" placeholder="YYYY/MM/DD" required /><br />
+                                <input type="text" id="rtn" placeholder="YYYY-MM-DD" required /><br />
                                 <label for="airport">Chosen airport</label>
                                 <input id="airport" type="text" placeholder="Enter 3 letter code" required /><br />
                                 <button id="fly" class="btn myBtn">Search</button>

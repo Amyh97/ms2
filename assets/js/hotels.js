@@ -36,7 +36,7 @@ var stay = function () {
     });
     //pik-date id on label to close picker
     var pickerOpen = false;
-    $("#pik-date").click(function () {
+    $("#pikDate").click(function () {
         pickerOpen ? picker.hide() : picker.show();
         pickerOpen = !pickerOpen;
     });

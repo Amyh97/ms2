@@ -27,7 +27,7 @@ body {
     padding: 0;
 }
 
-.hero-image {
+.heroImage {
     background: url("../images/clock.jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -143,7 +143,7 @@ footer {
 }
 
 
-#flight-img {
+#flightImg {
     clear: both;
     float: left;
     padding-right: 25px;
@@ -189,12 +189,12 @@ footer {
 
 /*---- accomodation ---*/
 
-.hotel-card {
+.hotelCard {
     width: 50rem;
     padding-bottom: 10px;
 }
 
-.hotel-form {
+.hotelForm {
     margin: 8px;
 }
 

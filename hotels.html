@@ -30,22 +30,22 @@
         </header>
         <section>
             <!-- hero image with title-->
-            <div class="hero-image no-gutters">
+            <div class="heroImage no-gutters">
                 <h1 class="title">Prague</h1>
             </div>
             <!-- section under hero image with hotel search and results sections in cards-->
             <div class="row no gutters">
                 <div class="col-md-5 offset-md-1 spacing">
-                    <div class="card hotel-card">
+                    <div class="card hotelCard">
                         <img src="assets/images/goldenLane.JPG" class="card-img-top" alt="Golden Lane" id="goldenLane" />
                         <img src="assets/images/charlesb.JPG" class="card-img-top" alt="Charles Bridge" id="charlesb" />
                         <div class="card-body">
                             <!--search, values from form used to fill in URL for API call-->
-                            <form class="hotel-form">
+                            <form class="hotelForm">
                                 <!--lables to show what data is required. ID on label used to cloe date picker-->
-                                <label for="ci" id="pik-date">Check-in date <i class="far fa-calendar-alt"></i></label>
+                                <label for="checkIn" id="pikDate">Check-in date <i class="far fa-calendar-alt"></i></label>
                                 <!-- br used to keep lables and input fields together-->
-                                <input type="text" id="checkIn" placeholder="YYYY/MM/DD" required /><br />
+                                <input type="text" id="checkIn" placeholder="YYYY-MM-DD" required /><br />
                                 <label for="rooms">Number of rooms</label>
                                 <!--required used to provent errors as data is used to fill in URL for API call-->
                                 <input type="number" id="rooms" required /><br />
@@ -62,7 +62,7 @@
                 </div>
                 <div class="col-md-5 offset-md-1 spacing">
                     <!-- Bootstrap card-->
-                    <div class="card hotel-card">
+                    <div class="card hotelCard">
                         <div class="card-body">
                             <!-- results from API-->
                             <h2 class="card-title results">Results <i class="fas fa-suitcase"></i></h2>
