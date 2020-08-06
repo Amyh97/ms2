@@ -159,6 +159,7 @@ footer {
 #key {
     width: 95%;
     margin-bottom: 1.5rem;
+    font-size: 16px;
 }
 /*--- cards---*/
 
@@ -280,6 +281,10 @@ footer {
         margin-left: 60%;
     }
 
+    #map {
+        height: 600px;;
+    }
+
 }
 
 
@@ -322,5 +327,19 @@ footer {
 
     .fullYear {
         display: none;
+    }
+
+    #key {
+        height: 60rem;
+        width: 95%;
+        font-size: 16px;
+    }
+
+    #map {
+        height: 360px;
+    }
+
+    #key th {
+        font-size: 16px;
     }
 }
