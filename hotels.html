@@ -45,7 +45,7 @@
                                 <!--lables to show what data is required. ID on label used to cloe date picker-->
                                 <label for="ci" id="pik-date">Check-in date <i class="far fa-calendar-alt"></i></label>
                                 <!-- br used to keep lables and input fields together-->
-                                <input type="text" id="ci" placeholder="YYYY/MM/DD" required /><br />
+                                <input type="text" id="checkIn" placeholder="YYYY/MM/DD" required /><br />
                                 <label for="rooms">Number of rooms</label>
                                 <!--required used to provent errors as data is used to fill in URL for API call-->
                                 <input type="number" id="rooms" required /><br />
@@ -71,9 +71,9 @@
                                 <!--ol used to show the top 3 recommended hotels-->
                                 <ol>
                                     <!--IDs used in JavaScript to add data to li elements class names clear data out of section wile leaving the numbers, like when screen is first loaded-->
-                                    <li id="fhotel" class="clearArea"></li>
-                                    <li id="shotel" class="clearArea"></li>
-                                    <li id="thotel" class="clearArea"></li>
+                                    <li id="firstHotel" class="clearArea"></li>
+                                    <li id="secondHotel" class="clearArea"></li>
+                                    <li id="thirdHotel" class="clearArea"></li>
                                 </ol>
                             </div>
                         </div>
@@ -94,5 +94,6 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
         <script src="assets/js/script.js"></script>
+        <script src="assets/js/hotels.js"></script>
     </body>
 </html>
