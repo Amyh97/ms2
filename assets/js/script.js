@@ -16,7 +16,9 @@ $(".clear").on("click", function () {
 
 //hide instructions and show results
 $(".results").hide();
-$(".closeInstructions").click(function () {
-    $(".instructions").hide();
-    $(".results").show();
+$(".search").on("click", function () {
+	$(".instructions").hide();
+    $(".results").show()
+	//searching notification
+    document.getElementsByClassName("searching").innerHTML = ("Searching...")
 });

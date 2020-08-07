@@ -45,10 +45,9 @@
                                 Click on the box for the date to open a date picker. Once you have selected your date double click on "Departure Date" and "Return Date" to close the relevant date picker in turn. Close these instructions to
                                 see the results.
                             </p>
-                            <button class="btn myBtn closeInstructions instructions">Close Instructions</button>
                             <!--empty p tags, filled in using Javascript. clear area class name used to reset when user clicks reset -->
                             <h5 class="card-title results">Results... <i class="fas fa-plane-departure"></i></h5>
-                            <p class="card-text clearArea results" id="flightResults"></p>
+                            <p class="card-text clearArea results searching" id="flightResults"></p>
                         </div>
                     </div>
                 </div>
@@ -70,7 +69,7 @@
                                 <input type="text" id="rtn" placeholder="YYYY-MM-DD" required /><br />
                                 <label for="airport">Chosen airport</label>
                                 <input id="airport" type="text" placeholder="Enter 3 letter code" required /><br />
-                                <button id="fly" class="btn myBtn">Search</button>
+                                <button id="fly" class="btn myBtn search">Search</button>
                                 <!-- type rest resets form, class clear used to reset results section-->
                                 <button type="reset" class="btn myBtn clear">Reset</button>
                             </form>

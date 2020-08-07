@@ -47,9 +47,9 @@
                                 <!--ol used to show the top 3 recommended hotels-->
                                 <ol>
                                     <!--IDs used in JavaScript to add data to li elements class names clear data out of section wile leaving the numbers, like when screen is first loaded-->
-                                    <li id="firstHotel" class="clearArea"></li>
-                                    <li id="secondHotel" class="clearArea"></li>
-                                    <li id="thirdHotel" class="clearArea"></li>
+                                    <li id="firstHotel" class="clearArea searching"></li>
+                                    <li id="secondHotel" class="clearArea searching"></li>
+                                    <li id="thirdHotel" class="clearArea searching"></li>
                                 </ol>
                             </div>
                         </div>
@@ -58,7 +58,6 @@
                             <p class="card-text instructions">
                                 Click on the box for the date to open a date picker. Once you have selected your date double click on "Check In Date" to close the date picker. Close the instructions to see the results.
                             </p>
-                            <button class="btn myBtn closeInstructions instructions">Close Instructions</button>
                         </div>
                     </div>
                 </div>
@@ -80,7 +79,7 @@
                                 <input id="people" required type="number" min="1" /><br />
                                 <label for="nights">Number of nights</label>
                                 <input type="number" min="1" id="nights" required /><br />
-                                <button type="submit" class="myBtn btn" id="searchHotel">Search</button>
+                                <button type="submit" class="myBtn btn search" id="searchHotel">Search</button>
                                 <!-- type reset rests form, class name clear used to reset results area-->
                                 <button type="reset" class="myBtn btn clear">Reset</button>
                             </form>
