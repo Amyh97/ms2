@@ -121,7 +121,7 @@ Further reading and troubleshooting on cloning a repository from GitHub here.
 -	For the hotel API I went onto Rapid API and used the [TripAdvisor](https://rapidapi.com/apidojo/api/tripadvisor1) API. 
 -	Other information, mainly on index.html, but also the information on how to get to and from the airport came from the Lonely Planet Eastern Europe guidebook. 
 ### Media 
--	The flag icon in the top right-hand corner of the pages came from [Wikimedia](https://commons.wikimedia.org/wiki/File:Flag_of_the_Czech_Republic_(bordered).svg)
+-	The flag icon in the top right-hand corner of the pages and in the browser's tabs came from [Wikimedia](https://commons.wikimedia.org/wiki/File:Flag_of_the_Czech_Republic_(bordered).svg)
 -   I used [Am I responsive?](http://ami.responsivedesign.is/?url=https%3A%2F%2Famyh97.github.io%2Fms2%2F#) for the image at the top of the Readme file showing the website on different devices.
 -	All other images used on the website are my own photos that I put into my GitHub repository 
 
