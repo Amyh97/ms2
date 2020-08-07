@@ -25,6 +25,7 @@ var departure = function () {
     //format for date determined by API documentation
     var field = document.getElementById("dep");
     var picker = new Pikaday({
+        minDate: new Date(),
         onSelect: function () {
             field.value = this.getMoment().format("YYYY-MM-DD");
         },
@@ -42,12 +43,14 @@ var departure = function () {
 };
 $("#dep").append(departure);
 
+
 // date pickers from Pikaday as type=date does not work on all browsers
 //put in separate function so variables are not universal
 var land = function () {
     var field = document.getElementById("rtn");
     //pikaday from extrenal js libary
     var picker = new Pikaday({
+        minDate: new Date(),
         onSelect: function () {
             //date format determined by API documentation
             field.value = this.getMoment().format("YYYY-MM-DD");

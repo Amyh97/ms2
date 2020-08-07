@@ -30,6 +30,7 @@ var stay = function () {
     //formats date, determined by API documentation
     var field = document.getElementById("checkIn");
     var picker = new Pikaday({
+        minDate: new Date(),
         onSelect: function () {
             field.value = this.getMoment().format("YYYY-MM-DD");
         },
